@@ -1,0 +1,310 @@
+{
+  "paths": {
+    "/api/accounts": {
+      "post": {
+        "description": "get all blog",
+        "summary": "get all blog",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "balance": {
+                  "type": "BigDecimal"
+                },
+                "deleted": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/accounts/{accountId}": {
+      "get": {
+        "description": "get all articles by paginate",
+        "summary": "get all articles by paginate",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "balance": {
+                  "type": "BigDecimal"
+                },
+                "accountId": {
+                  "type": "String"
+                },
+                "title": {
+                  "type": "BigDecimal"
+                },
+                "description": {
+                  "type": "String"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "update blog info",
+        "summary": "update blog ino",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/api/accounts/{accountId}/history": {
+      "get": {
+        "description": "get all articles by paginate",
+        "summary": "get all articles by paginate",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "date": {
+                    "type": "date"
+                  },
+                  "entryType": {
+                    "type": "EntryType"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customers/{customerId}/accounts": {
+      "get": {
+        "description": "get all articles by paginate",
+        "summary": "get all articles by paginate",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "balance": {
+                    "type": "BigDecimal"
+                  },
+                  "accountId": {
+                    "type": "String"
+                  },
+                  "title": {
+                    "type": "BigDecimal"
+                  },
+                  "description": {
+                    "type": "String"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customers": {
+      "get": {
+        "description": "get a specify article's category info by id",
+        "summary": "get a specify article's category info by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Customers"
+            }
+          }
+        }
+      },                   
+      "post": {
+        "description": "get a specify article's category info by id",
+        "summary": "get a specify article's category info by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        }
+      }
+    },
+    "/api/customers/{customerId}": {
+      "get": {
+        "description": "get a specify article's category info by id",
+        "summary": "get a specify article's category info by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        }
+      }
+    },
+    "/api/customers/{customers}/toaccounts/{accountId}": {
+      "delete": {
+        "description": "create a new category",
+        "summary": "create a new category",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/api/customers/{customers}/toaccounts": {
+      "post": {
+        "description": "get all article's tags",
+        "summary": "get all article's tags",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "version": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/transfers": {
+      "post": {
+        "description": "create a new tag",
+        "summary": "create a new tag",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "moneyTransferId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Customers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Customer"
+      }
+    },
+    "Customer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "ssn": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "address": {
+          "type": "Address"
+        },
+        "toAccounts": {
+          "type": "Map"
+        }
+      }
+    },
+    "Accounts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Account"
+      }
+    },
+    "Account": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "boardId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "createBy": {
+          "type": "string"
+        },
+        "udateBy": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "date"
+        },
+        "udateDate": {
+          "type": "date"
+        },
+        "statue": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "other": {
+    "/api/login": {
+      "post": {
+        "description": "create a new blog",
+        "summary": "create a new blog",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        }
+      }
+    },
+    "/api/user": {
+      "get": {
+        "description": "get all article's categories",
+        "summary": "get all article's categories",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

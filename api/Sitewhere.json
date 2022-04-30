@@ -1,0 +1,7046 @@
+{
+  "paths": {
+    "/areas": {
+      "get": {
+        "description": "List areas matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IArea»",
+              "$ref": "#/components/schemas/ISearchResults_IArea_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IArea",
+              "$ref": "#/components/schemas/IArea"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}": {
+      "get": {
+        "description": "Get area by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IArea",
+              "$ref": "#/components/schemas/IArea"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update existing area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IArea",
+              "$ref": "#/components/schemas/IArea"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete area by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IArea",
+              "$ref": "#/components/schemas/IArea"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/alerts": {
+      "get": {
+        "description": "List alerts for an area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceAlert»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceAlert_"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/assignments": {
+      "get": {
+        "description": "List device assignments for an area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«DeviceAssignment»",
+              "$ref": "#/components/schemas/ISearchResults_DeviceAssignment_"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/invocations": {
+      "get": {
+        "description": "List command invocations for an area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandInvocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandInvocation_"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for area",
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "string",
+              "originalRef": "ISearchResults«IDeviceCommandInvocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandInvocation_"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/locations": {
+      "get": {
+        "description": "List locations for an area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceLocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceLocation_"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/measurements": {
+      "get": {
+        "description": "List measurements for an area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceMeasurement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceMeasurement_"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/responses": {
+      "get": {
+        "description": "List command responses for an area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandResponse»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandResponse_"
+            }
+          }
+        }
+      }
+    },
+    "/areas/{areaToken}/statechanges": {
+      "get": {
+        "description": "List state changes associated with an area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceStateChange»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceStateChange_"
+            }
+          }
+        }
+      }
+    },
+    "/areatypes": {
+      "get": {
+        "description": "List area types matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IAreaType»",
+              "$ref": "#/components/schemas/ISearchResults_IAreaType_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new area type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAreaType",
+              "$ref": "#/components/schemas/IAreaType"
+            }
+          }
+        }
+      }
+    },
+    "/areatypes/{areaTypeToken}": {
+      "get": {
+        "description": "Get area type by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAreaType",
+              "$ref": "#/components/schemas/IAreaType"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update existing area type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAreaType",
+              "$ref": "#/components/schemas/IAreaType"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete area type by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAreaType",
+              "$ref": "#/components/schemas/IAreaType"
+            }
+          }
+        }
+      }
+    },
+    "/areatypes/{areaTypeToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for area type",
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "string",
+              "originalRef": "IAreaType",
+              "$ref": "#/components/schemas/IAreaType"
+            }
+          }
+        }
+      }
+    },
+    "/assets": {
+      "get": {
+        "description": "List assets matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IAsset»",
+              "$ref": "#/components/schemas/ISearchResults_IAsset_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new asset",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAsset",
+              "$ref": "#/components/schemas/IAsset"
+            }
+          }
+        }
+      }
+    },
+    "/assets/{assetToken}": {
+      "get": {
+        "description": "Get asset by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAsset",
+              "$ref": "#/components/schemas/IAsset"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing hardware asset in category",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAsset",
+              "$ref": "#/components/schemas/IAsset"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete asset by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAsset",
+              "$ref": "#/components/schemas/IAsset"
+            }
+          }
+        }
+      }
+    },
+    "/assets/{assetToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAsset",
+              "$ref": "#/components/schemas/IAsset"
+            }
+          }
+        }
+      }
+    },
+    "/assettypes": {
+      "get": {
+        "description": "List asset types matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IAssetType»",
+              "$ref": "#/components/schemas/ISearchResults_IAssetType_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new asset type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAssetType",
+              "$ref": "#/components/schemas/IAssetType"
+            }
+          }
+        }
+      }
+    },
+    "/assettypes/{assetTypeToken}": {
+      "get": {
+        "description": "Get asset by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAssetType",
+              "$ref": "#/components/schemas/IAssetType"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing hardware asset in category",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAssetType",
+              "$ref": "#/components/schemas/IAssetType"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete asset type by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAssetType",
+              "$ref": "#/components/schemas/IAssetType"
+            }
+          }
+        }
+      }
+    },
+    "/assettypes/{assetTypeToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IAssetType",
+              "$ref": "#/components/schemas/IAssetType"
+            }
+          }
+        }
+      }
+    },
+    "/assignments": {
+      "get": {
+        "description": "List assignments matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceAssignment»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceAssignment_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceAssignment",
+              "$ref": "#/components/schemas/DeviceAssignment"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/bulk/alerts": {
+      "post": {
+        "description": "List alert events for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceAlert»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceAlert_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/bulk/invocations": {
+      "post": {
+        "description": "List command invocation events for assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandInvocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandInvocation_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/bulk/locations": {
+      "post": {
+        "description": "List location events for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceLocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceLocation_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/bulk/measurements": {
+      "post": {
+        "description": "List measurement events for multiple assignments",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceMeasurement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceMeasurement_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/bulk/measurements/series": {
+      "post": {
+        "description": "List measurements for multiple assignments as chart series",
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "originalRef": "IChartSeries«double»",
+              "$ref": "#/components/schemas/IChartSeries_double_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/bulk/responses": {
+      "post": {
+        "description": "List command response events for assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandResponse»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandResponse_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/bulk/statechanges": {
+      "post": {
+        "description": "List state change events for a device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceStateChange»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceStateChange_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}": {
+      "get": {
+        "description": "Get device assignment by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceAssignment",
+              "$ref": "#/components/schemas/DeviceAssignment"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceAssignment",
+              "$ref": "#/components/schemas/DeviceAssignment"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete an existing device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceAssignment",
+              "$ref": "#/components/schemas/DeviceAssignment"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/alerts": {
+      "get": {
+        "description": "List alert events for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceAlert»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceAlert_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create alert event for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceAlert",
+              "$ref": "#/components/schemas/IDeviceAlert"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/end": {
+      "post": {
+        "description": "Release an active device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceAssignment",
+              "$ref": "#/components/schemas/DeviceAssignment"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/invocations": {
+      "get": {
+        "description": "List command invocation events for assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandInvocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandInvocation_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create command invocation event for assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceCommandInvocation",
+              "$ref": "#/components/schemas/IDeviceCommandInvocation"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/invocations/schedules/{scheduleToken}": {
+      "post": {
+        "description": "Schedule command invocation",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScheduledJob",
+              "$ref": "#/components/schemas/IScheduledJob"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScheduledJob",
+              "$ref": "#/components/schemas/IScheduledJob"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/locations": {
+      "get": {
+        "description": "List location events for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceLocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceLocation_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create location event for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceLocation",
+              "$ref": "#/components/schemas/IDeviceLocation"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/measurements": {
+      "get": {
+        "description": "List measurement events for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceMeasurement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceMeasurement_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create measurements event for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceMeasurement",
+              "$ref": "#/components/schemas/IDeviceMeasurement"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/measurements/series": {
+      "get": {
+        "description": "List assignment measurements as chart series",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IChartSeries«double»",
+              "$ref": "#/components/schemas/IChartSeries_double_"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/missing": {
+      "post": {
+        "description": "Mark device assignment as missing",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceAssignment",
+              "$ref": "#/components/schemas/DeviceAssignment"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/responses": {
+      "get": {
+        "description": "List command response events for assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandResponse»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandResponse_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create command response event for assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceCommandResponse",
+              "$ref": "#/components/schemas/DeviceCommandResponse"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/statechanges": {
+      "get": {
+        "description": "List state change events for a device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceStateChange»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceStateChange_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create an state change event for a device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceStateChange",
+              "$ref": "#/components/schemas/IDeviceStateChange"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/streams": {
+      "get": {
+        "description": "List data streams for device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceStream»",
+              "$ref": "#/components/schemas/DeviceStream"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create data stream for a device assignment",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceStream",
+              "$ref": "#/components/schemas/DeviceStream"
+            }
+          }
+        }
+      }
+    },
+    "/assignments/{token}/streams/{streamId}": {
+      "get": {
+        "description": "Get device assignment data stream by id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceStream»",
+              "$ref": "#/components/schemas/DeviceStream"
+            }
+          }
+        }
+      }
+    },
+    "/authorities": {
+      "get": {
+        "description": "List authorities that match criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IGrantedAuthority»",
+              "$ref": "#/components/schemas/ISearchResults_IGrantedAuthority_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new authority",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "GrantedAuthority",
+              "$ref": "#/components/schemas/GrantedAuthority"
+            }
+          }
+        }
+      }
+    },
+    "/authorities/hierarchy": {
+      "get": {
+        "description": "Get authorities hierarchy",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "GrantedAuthorityHierarchyNode",
+              "$ref": "#/components/schemas/GrantedAuthorityHierarchyNode"
+            }
+          }
+        }
+      }
+    },
+    "/authorities/{name}": {
+      "get": {
+        "description": "Get authority by id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "GrantedAuthority",
+              "$ref": "#/components/schemas/GrantedAuthority"
+            }
+          }
+        }
+      }
+    },
+    "/batch": {
+      "get": {
+        "description": "List batch operations",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IBatchOperation»",
+              "$ref": "#/components/schemas/ISearchResults_IBatchOperation_"
+            }
+          }
+        }
+      }
+    },
+    "/batch/command": {
+      "post": {
+        "description": "Create new batch command invocation",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IBatchOperation",
+              "$ref": "#/components/schemas/IBatchOperation"
+            }
+          }
+        }
+      }
+    },
+    "/batch/command/criteria": {
+      "post": {
+        "description": "Create batch command operation based on criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IBatchOperation",
+              "$ref": "#/components/schemas/IBatchOperation"
+            }
+          }
+        }
+      }
+    },
+    "/batch/{batchToken}": {
+      "get": {
+        "description": "Get batch operation by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IBatchOperation",
+              "$ref": "#/components/schemas/IBatchOperation"
+            }
+          }
+        }
+      }
+    },
+    "/batch/{operationToken}/elements": {
+      "get": {
+        "description": "List batch operation elements",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IBatchElement»",
+              "$ref": "#/components/schemas/ISearchResults_IBatchElement_"
+            }
+          }
+        }
+      }
+    },
+    "/commands": {
+      "get": {
+        "description": "List device commands that match criteria.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommand»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommand_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create device command.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceCommand",
+              "$ref": "#/components/schemas/IDeviceCommand"
+            }
+          }
+        }
+      }
+    },
+    "/commands/namespaces": {
+      "get": {
+        "description": "List device commands by namespace",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandNamespace»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandNamespace_"
+            }
+          }
+        }
+      }
+    },
+    "/commands/{token}": {
+      "get": {
+        "description": "Get device command by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceCommand",
+              "$ref": "#/components/schemas/IDeviceCommand"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing device command",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceCommand",
+              "$ref": "#/components/schemas/IDeviceCommand"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete device command by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceCommand",
+              "$ref": "#/components/schemas/IDeviceCommand"
+            }
+          }
+        }
+      }
+    },
+    "/customers": {
+      "get": {
+        "description": "List customers matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«ICustomer»",
+              "$ref": "#/components/schemas/ISearchResults_ICustomer_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomer",
+              "$ref": "#/components/schemas/ICustomer"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}": {
+      "get": {
+        "description": "Get customer by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomer",
+              "$ref": "#/components/schemas/ICustomer"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update existing customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomer",
+              "$ref": "#/components/schemas/ICustomer"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete customer by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomer",
+              "$ref": "#/components/schemas/ICustomer"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/alerts": {
+      "get": {
+        "description": "List alerts for a customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceAlert»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceAlert_"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/assignments": {
+      "get": {
+        "description": "List device assignments for a customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«DeviceAssignment»",
+              "$ref": "#/components/schemas/ISearchResults_DeviceAssignment_"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/invocations": {
+      "get": {
+        "description": "List command invocations for a customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandInvocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandInvocation_"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandInvocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandInvocation_"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/locations": {
+      "get": {
+        "description": "List locations for a customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceLocation»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceLocation_"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/measurements": {
+      "get": {
+        "description": "List measurements for a customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceMeasurement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceMeasurement_"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/responses": {
+      "get": {
+        "description": "List command responses for a customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandResponse»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandResponse_"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customerToken}/statechanges": {
+      "get": {
+        "description": "List state changes associated with a customer",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceStateChange»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceStateChange_"
+            }
+          }
+        }
+      }
+    },
+    "/customertypes": {
+      "get": {
+        "description": "List customer types matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«ICustomerType»",
+              "$ref": "#/components/schemas/ISearchResults_ICustomerType_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new customer type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomerType",
+              "$ref": "#/components/schemas/ICustomerType"
+            }
+          }
+        }
+      }
+    },
+    "/customertypes/{customerTypeToken}": {
+      "get": {
+        "description": "Get customer type by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomerType",
+              "$ref": "#/components/schemas/ICustomerType"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update existing customer type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomerType",
+              "$ref": "#/components/schemas/ICustomerType"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete customer type by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomerType",
+              "$ref": "#/components/schemas/ICustomerType"
+            }
+          }
+        }
+      }
+    },
+    "/customertypes/{customerTypeToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for customer type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ICustomerType",
+              "$ref": "#/components/schemas/ICustomerType"
+            }
+          }
+        }
+      }
+    },
+    "/devicegroups": {
+      "get": {
+        "description": "List device groups that match criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceGroup»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceGroup_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new device group",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceGroup",
+              "$ref": "#/components/schemas/IDeviceGroup"
+            }
+          }
+        }
+      }
+    },
+    "/devicegroups/{groupToken}": {
+      "get": {
+        "description": "Get a device group by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceGroup",
+              "$ref": "#/components/schemas/IDeviceGroup"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing device group",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceGroup",
+              "$ref": "#/components/schemas/IDeviceGroup"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete device group by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceGroup",
+              "$ref": "#/components/schemas/IDeviceGroup"
+            }
+          }
+        }
+      }
+    },
+    "/devicegroups/{groupToken}/elements": {
+      "get": {
+        "description": "List elements in a device group",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceGroupElement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceGroupElement_"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Add elements to device group",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceGroupElement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceGroupElement_"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete elements from device group",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceGroupElement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceGroupElement_"
+            }
+          }
+        }
+      }
+    },
+    "/devicegroups/{groupToken}/elements/{elementId}": {
+      "delete": {
+        "description": "Delete elements from device group",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceGroupElement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceGroupElement_"
+            }
+          }
+        }
+      }
+    },
+    "/devicegroups/{groupToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for area",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceGroupElement»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceGroupElement_"
+            }
+          }
+        }
+      }
+    },
+    "/devices": {
+      "get": {
+        "description": "List devices that match criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDevice»",
+              "$ref": "#/components/schemas/ISearchResults_IDevice_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new device",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDevice",
+              "$ref": "#/components/schemas/IDevice"
+            }
+          }
+        }
+      }
+    },
+    "/devices/group/{groupToken}": {
+      "get": {
+        "description": "List devices in device group",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDevice»",
+              "$ref": "#/components/schemas/ISearchResults_IDevice_"
+            }
+          }
+        }
+      }
+    },
+    "/devices/grouprole/{role}": {
+      "get": {
+        "description": "List devices in device groups with role",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDevice»",
+              "$ref": "#/components/schemas/ISearchResults_IDevice_"
+            }
+          }
+        }
+      }
+    },
+    "/devices/{deviceToken}": {
+      "get": {
+        "description": "Get device by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDevice",
+              "$ref": "#/components/schemas/IDevice"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing device",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDevice",
+              "$ref": "#/components/schemas/IDevice"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete device based on unique hardware id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDevice",
+              "$ref": "#/components/schemas/IDevice"
+            }
+          }
+        }
+      }
+    },
+    "/devices/{deviceToken}/assignment": {
+      "get": {
+        "description": "Get current assignment for device",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceAssignment",
+              "$ref": "#/components/schemas/IDeviceAssignment"
+            }
+          }
+        }
+      }
+    },
+    "/devices/{deviceToken}/assignments": {
+      "get": {
+        "description": "List assignment history for device",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceAssignment»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceAssignment_"
+            }
+          }
+        }
+      }
+    },
+    "/devices/{deviceToken}/batch": {
+      "post": {
+        "description": "Add multiple events for device",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceEventBatchResponse",
+              "$ref": "#/components/schemas/IDeviceEventBatchResponse"
+            }
+          }
+        }
+      }
+    },
+    "/devices/{deviceToken}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for device",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceEventBatchResponse",
+              "$ref": "#/components/schemas/IDeviceEventBatchResponse"
+            }
+          }
+        }
+      }
+    },
+    "/devices/{deviceToken}/mappings": {
+      "post": {
+        "description": "Create new device element mapping",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDevice",
+              "$ref": "#/components/schemas/IDevice"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete existing device element mapping",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDevice",
+              "$ref": "#/components/schemas/IDevice"
+            }
+          }
+        }
+      }
+    },
+    "/devices/{hardwareId}/symbol": {
+      "get": {
+        "description": "Get default symbol for device",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDevice",
+              "$ref": "#/components/schemas/IDevice"
+            }
+          }
+        }
+      }
+    },
+    "/devicestates/search": {
+      "post": {
+        "description": "List device states matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceState»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceState_"
+            }
+          }
+        }
+      }
+    },
+    "/devicetypes": {
+      "get": {
+        "description": "List device types that match criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceType»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceType_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new device type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceType",
+              "$ref": "#/components/schemas/IDeviceType"
+            }
+          }
+        }
+      }
+    },
+    "/devicetypes/{token}": {
+      "get": {
+        "description": "Get device type by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceType",
+              "$ref": "#/components/schemas/IDeviceType"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update existing device type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceType",
+              "$ref": "#/components/schemas/IDeviceType"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete existing device type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceType",
+              "$ref": "#/components/schemas/IDeviceType"
+            }
+          }
+        }
+      }
+    },
+    "/devicetypes/{token}/label/{generatorId}": {
+      "get": {
+        "description": "Get label for device type",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceType",
+              "$ref": "#/components/schemas/IDeviceType"
+            }
+          }
+        }
+      }
+    },
+    "/devicetypes/{token}/proto": {
+      "get": {
+        "description": "Get specification GPB by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceType",
+              "$ref": "#/components/schemas/IDeviceType"
+            }
+          }
+        }
+      }
+    },
+    "/devicetypes/{token}/spec.proto": {
+      "get": {
+        "description": "Get device type GPB file by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceType",
+              "$ref": "#/components/schemas/IDeviceType"
+            }
+          }
+        }
+      }
+    },
+    "/events/alternate/{alternateId}": {
+      "get": {
+        "description": "Get event by alternate (external) id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceEvent",
+              "$ref": "#/components/schemas/IDeviceEvent"
+            }
+          }
+        }
+      }
+    },
+    "/events/id/{eventId}": {
+      "get": {
+        "description": "Get event by unique id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceEvent",
+              "$ref": "#/components/schemas/IDeviceEvent"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/configuration": {
+      "get": {
+        "description": "Get global configuration based on service identifier",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ElementContent",
+              "$ref": "#/components/schemas/ElementContent"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Update global configuration based on service identifier.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ElementContent",
+              "$ref": "#/components/schemas/ElementContent"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/configuration/model": {
+      "get": {
+        "description": "Get configuration model based on service identifier",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IConfigurationModel",
+              "$ref": "#/components/schemas/IConfigurationModel"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/scripts": {
+      "get": {
+        "description": "Get list of global script metadata",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new global script",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/scripts/{scriptId}": {
+      "get": {
+        "description": "Get metadata for a tenant script based on unique script id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a global script and version history",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}": {
+      "post": {
+        "description": "Update an existing global script",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}/activate": {
+      "post": {
+        "description": "Activate a global script version",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}/clone": {
+      "post": {
+        "description": "Clone an existing global script version to create a new version",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptVersion",
+              "$ref": "#/components/schemas/IScriptVersion"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}/content": {
+      "get": {
+        "description": "Get content for a global script based on unique script id and version id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptVersion",
+              "$ref": "#/components/schemas/IScriptVersion"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/templates": {
+      "get": {
+        "description": "Get list of script templates for a given microservice",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptTemplate",
+              "$ref": "#/components/schemas/IScriptTemplate"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/scripting/templates/{templateId}": {
+      "get": {
+        "description": "Get list of script templates for a given microservice",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptTemplate",
+              "$ref": "#/components/schemas/IScriptTemplate"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/configuration": {
+      "get": {
+        "description": "Get tenant configuration based on service identifier",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ElementContent",
+              "$ref": "#/components/schemas/ElementContent"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Update global configuration based on service identifier.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ElementContent",
+              "$ref": "#/components/schemas/ElementContent"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts": {
+      "get": {
+        "description": "Get list of script metadata for the given tenant",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new tenant script",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}": {
+      "get": {
+        "description": "Get metadata for a tenant script based on unique script id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a tenant script and version history",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}": {
+      "post": {
+        "description": "Update an existing tenant script",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}/activate": {
+      "post": {
+        "description": "Activate a tenant script version",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptMetadata",
+              "$ref": "#/components/schemas/IScriptMetadata"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}/clone": {
+      "post": {
+        "description": "Clone an existing tenant script version to create a new version",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptVersion",
+              "$ref": "#/components/schemas/IScriptVersion"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}/content": {
+      "get": {
+        "description": "Get content for a tenant script based on unique script id and version id",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScriptVersion",
+              "$ref": "#/components/schemas/IScriptVersion"
+            }
+          }
+        }
+      }
+    },
+    "/instance/microservice/{identifier}/tenants/{tenantToken}/state": {
+      "get": {
+        "description": "Get state information for specific tenant engine across all microservice instances",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ITenantEngineState",
+              "$ref": "#/components/schemas/ITenantEngineState"
+            }
+          }
+        }
+      }
+    },
+    "/instance/topology": {
+      "get": {
+        "description": "Get current instance topology",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "InstanceTopologySummary",
+              "$ref": "#/components/schemas/InstanceTopologySummary"
+            }
+          }
+        }
+      }
+    },
+    "/instance/topology/global": {
+      "get": {
+        "description": "Get global microservices in current instance topology",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "InstanceTopologySummary",
+              "$ref": "#/components/schemas/InstanceTopologySummary"
+            }
+          }
+        }
+      }
+    },
+    "/instance/topology/tenant": {
+      "get": {
+        "description": "Get tenant microservices in current instance topology",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "InstanceTopologySummary",
+              "$ref": "#/components/schemas/InstanceTopologySummary"
+            }
+          }
+        }
+      }
+    },
+    "/invocations/id/{id}": {
+      "get": {
+        "description": "Get command invocation by unique id.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceCommandInvocation",
+              "$ref": "#/components/schemas/IDeviceCommandInvocation"
+            }
+          }
+        }
+      }
+    },
+    "/invocations/id/{id}/summary": {
+      "get": {
+        "description": "Get command invocation summary",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "DeviceCommandInvocationSummary",
+              "$ref": "#/components/schemas/DeviceCommandInvocationSummary"
+            }
+          }
+        }
+      }
+    },
+    "/invocations/id/{invocationId}/responses": {
+      "get": {
+        "description": "List responses for command invocation",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceCommandResponse»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceCommandResponse_"
+            }
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "get": {
+        "description": "List scheduled jobs matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IScheduledJob»",
+              "$ref": "#/components/schemas/ISearchResults_IScheduledJob_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new scheduled job",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScheduledJob",
+              "$ref": "#/components/schemas/IScheduledJob"
+            }
+          }
+        }
+      }
+    },
+    "/jobs/{token}": {
+      "get": {
+        "description": "Get scheduled job by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScheduledJob",
+              "$ref": "#/components/schemas/IScheduledJob"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update existing scheduled job",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScheduledJob",
+              "$ref": "#/components/schemas/IScheduledJob"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete scheduled job",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IScheduledJob",
+              "$ref": "#/components/schemas/IScheduledJob"
+            }
+          }
+        }
+      }
+    },
+    "/schedules": {
+      "get": {
+        "description": "List schedules matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«ISchedule»",
+              "$ref": "#/components/schemas/ISearchResults_ISchedule_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new schedule",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISchedule",
+              "$ref": "#/components/schemas/ISchedule"
+            }
+          }
+        }
+      }
+    },
+    "/schedules/{token}": {
+      "get": {
+        "description": "Get schedule by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISchedule",
+              "$ref": "#/components/schemas/ISchedule"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing schedule",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISchedule",
+              "$ref": "#/components/schemas/ISchedule"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete a schedule",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISchedule",
+              "$ref": "#/components/schemas/ISchedule"
+            }
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "description": "List available search providers",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "SearchProvider",
+              "$ref": "#/components/schemas/SearchProvider"
+            }
+          }
+        }
+      }
+    },
+    "/search/{providerId}/events": {
+      "get": {
+        "description": "Search for events in provider",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceEvent",
+              "$ref": "#/components/schemas/IDeviceEvent"
+            }
+          }
+        }
+      }
+    },
+    "/search/{providerId}/raw": {
+      "post": {
+        "description": "Execute search and return raw results",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "JsonNode",
+              "$ref": "#/components/schemas/JsonNode"
+            }
+          }
+        }
+      }
+    },
+    "/statuses": {
+      "get": {
+        "description": "List device statuses that match criteria.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IDeviceStatus»",
+              "$ref": "#/components/schemas/ISearchResults_IDeviceStatus_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create device status.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceStatus",
+              "$ref": "#/components/schemas/IDeviceStatus"
+            }
+          }
+        }
+      }
+    },
+    "/statuses/{token}": {
+      "get": {
+        "description": "Get device status by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceStatus",
+              "$ref": "#/components/schemas/IDeviceStatus"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing device status",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceStatus",
+              "$ref": "#/components/schemas/IDeviceStatus"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete device status by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDeviceStatus",
+              "$ref": "#/components/schemas/IDeviceStatus"
+            }
+          }
+        }
+      }
+    },
+    "/system/version": {
+      "get": {
+        "description": "Get version information",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IVersion",
+              "$ref": "#/components/schemas/IVersion"
+            }
+          }
+        }
+      }
+    },
+    "/tenants": {
+      "get": {
+        "description": "List tenants that match criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«ITenant»",
+              "$ref": "#/components/schemas/ISearchResults_ITenant_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new tenant",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ITenant",
+              "$ref": "#/components/schemas/ITenant"
+            }
+          }
+        }
+      }
+    },
+    "/tenants/datasets": {
+      "get": {
+        "description": "List datasets available for creating tenants",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IDatasetTemplate",
+              "$ref": "#/components/schemas/IDatasetTemplate"
+            }
+          }
+        }
+      }
+    },
+    "/tenants/templates": {
+      "get": {
+        "description": "List templates available for creating tenants",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ITenantTemplate",
+              "$ref": "#/components/schemas/ITenantTemplate"
+            }
+          }
+        }
+      }
+    },
+    "/tenants/{tenantToken}": {
+      "get": {
+        "description": "Get tenant by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ITenant",
+              "$ref": "#/components/schemas/ITenant"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing tenant.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ITenant",
+              "$ref": "#/components/schemas/ITenant"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete existing tenant",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ITenant",
+              "$ref": "#/components/schemas/ITenant"
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "description": "List users matching criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IUser»",
+              "$ref": "#/components/schemas/ISearchResults_IUser_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new user",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "User",
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        }
+      }
+    },
+    "/users/{username}": {
+      "get": {
+        "description": "Get user by username",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "User",
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update existing user.",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "User",
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete user by username",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "User",
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        }
+      }
+    },
+    "/users/{username}/authorities": {
+      "get": {
+        "description": "Get authorities for user",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "SearchResults«GrantedAuthority»",
+              "$ref": "#/components/schemas/SearchResults_GrantedAuthority_"
+            }
+          }
+        }
+      }
+    },
+    "/zones": {
+      "get": {
+        "description": "List zones that match criteria",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "ISearchResults«IZone»",
+              "$ref": "#/components/schemas/ISearchResults_IZone_"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new zone",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IZone",
+              "$ref": "#/components/schemas/IZone"
+            }
+          }
+        }
+      }
+    },
+    "/zones/{zoneToken}": {
+      "get": {
+        "description": "Get zone by token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IZone",
+              "$ref": "#/components/schemas/IZone"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "Update an existing zone",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IZone",
+              "$ref": "#/components/schemas/IZone"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete zone by unique token",
+        "responses": {
+          "200": {
+            "schema": {
+              "originalRef": "IZone",
+              "$ref": "#/components/schemas/IZone"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AreaCreateRequest": {
+      "type": "object",
+      "properties": {
+        "areaTypeToken": {
+          "type": "string"
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "bounds": {
+          "type": "array",
+          "items": {
+            "originalRef": "Location",
+            "$ref": "#/components/schemas/Location"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentAreaToken": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "AreaCreateRequest"
+    },
+    "AreaTypeCreateRequest": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "containedAreaTypeTokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "AreaTypeCreateRequest"
+    },
+    "AssetCreateRequest": {
+      "type": "object",
+      "properties": {
+        "assetTypeToken": {
+          "type": "string"
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "AssetCreateRequest"
+    },
+    "AssetTypeCreateRequest": {
+      "type": "object",
+      "properties": {
+        "assetCategory": {
+          "type": "string",
+          "enum": ["Device", "Person", "Hardware"]
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "AssetTypeCreateRequest"
+    },
+    "AttributeContent": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "title": "AttributeContent"
+    },
+    "BatchCommandForCriteriaRequest": {
+      "type": "object",
+      "properties": {
+        "areaToken": {
+          "type": "string"
+        },
+        "commandToken": {
+          "type": "string"
+        },
+        "deviceTypeToken": {
+          "type": "string"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "groupToken": {
+          "type": "string"
+        },
+        "groupsWithRole": {
+          "type": "string"
+        },
+        "parameterValues": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "BatchCommandForCriteriaRequest"
+    },
+    "BatchCommandInvocationRequest": {
+      "type": "object",
+      "properties": {
+        "commandToken": {
+          "type": "string"
+        },
+        "deviceTokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "parameterValues": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "BatchCommandInvocationRequest"
+    },
+    "CommandParameter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Double",
+            "Float",
+            "Int32",
+            "Int64",
+            "UInt32",
+            "UInt64",
+            "SInt32",
+            "SInt64",
+            "Fixed32",
+            "Fixed64",
+            "SFixed32",
+            "SFixed64",
+            "Bool",
+            "String",
+            "Bytes"
+          ]
+        }
+      },
+      "title": "CommandParameter"
+    },
+    "CustomerCreateRequest": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "customerTypeToken": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentCustomerToken": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "CustomerCreateRequest"
+    },
+    "CustomerTypeCreateRequest": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "containedCustomerTypeTokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "CustomerTypeCreateRequest"
+    },
+    "DeviceAlertCreateRequest": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "level": {
+          "type": "string",
+          "enum": ["Info", "Warning", "Error", "Critical"]
+        },
+        "message": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "source": {
+          "type": "string",
+          "enum": ["Device", "System"]
+        },
+        "type": {
+          "type": "string"
+        },
+        "updateState": {
+          "type": "boolean"
+        }
+      },
+      "title": "DeviceAlertCreateRequest"
+    },
+    "DeviceAssignment": {
+      "type": "object",
+      "properties": {
+        "activeDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "releasedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Missing", "Released"]
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "DeviceAssignment"
+    },
+    "DeviceAssignmentBulkRequest": {
+      "type": "object",
+      "properties": {
+        "deviceAssignmentTokens": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "DeviceAssignmentBulkRequest"
+    },
+    "DeviceAssignmentCreateRequest": {
+      "type": "object",
+      "properties": {
+        "areaToken": {
+          "type": "string"
+        },
+        "assetToken": {
+          "type": "string"
+        },
+        "customerToken": {
+          "type": "string"
+        },
+        "deviceToken": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Missing", "Released"]
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceAssignmentCreateRequest"
+    },
+    "DeviceCommandCreateRequest": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "deviceTypeToken": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "originalRef": "CommandParameter",
+            "$ref": "#/components/schemas/CommandParameter"
+          }
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceCommandCreateRequest"
+    },
+    "DeviceCommandInvocationCreateRequest": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "commandToken": {
+          "type": "string"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "initiator": {
+          "type": "string",
+          "enum": ["REST", "BatchOperation", "Script", "Scheduler"]
+        },
+        "initiatorId": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "parameterValues": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "target": {
+          "type": "string",
+          "enum": ["Assignment"]
+        },
+        "targetId": {
+          "type": "string"
+        },
+        "updateState": {
+          "type": "boolean"
+        }
+      },
+      "title": "DeviceCommandInvocationCreateRequest"
+    },
+    "DeviceCommandInvocationSummary": {
+      "type": "object",
+      "properties": {
+        "invocationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "originalRef": "Parameter",
+            "$ref": "#/components/schemas/Parameter"
+          }
+        },
+        "responses": {
+          "type": "array",
+          "items": {
+            "originalRef": "Response",
+            "$ref": "#/components/schemas/Response"
+          }
+        }
+      },
+      "title": "DeviceCommandInvocationSummary"
+    },
+    "DeviceCommandResponse": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "originatingEventId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "response": {
+          "type": "string"
+        },
+        "responseEventId": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "title": "DeviceCommandResponse"
+    },
+    "DeviceCommandResponseCreateRequest": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "originatingEventId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "response": {
+          "type": "string"
+        },
+        "responseEventId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "updateState": {
+          "type": "boolean"
+        }
+      },
+      "title": "DeviceCommandResponseCreateRequest"
+    },
+    "DeviceCreateRequest": {
+      "type": "object",
+      "properties": {
+        "comments": {
+          "type": "string"
+        },
+        "deviceElementMappings": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceElementMapping",
+            "$ref": "#/components/schemas/IDeviceElementMapping"
+          }
+        },
+        "deviceTypeToken": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "parentDeviceToken": {
+          "type": "string"
+        },
+        "removeParentHardwareId": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceCreateRequest"
+    },
+    "DeviceElementMapping": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "originalRef": "IDevice",
+          "$ref": "#/components/schemas/IDevice"
+        },
+        "deviceElementSchemaPath": {
+          "type": "string"
+        },
+        "deviceToken": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceElementMapping"
+    },
+    "DeviceElementSchema": {
+      "type": "object",
+      "properties": {
+        "deviceSlots": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceSlot",
+            "$ref": "#/components/schemas/DeviceSlot"
+          }
+        },
+        "deviceUnits": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceUnit",
+            "$ref": "#/components/schemas/DeviceUnit"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceElementSchema"
+    },
+    "DeviceEventBatch": {
+      "type": "object",
+      "properties": {
+        "alerts": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceAlertCreateRequest",
+            "$ref": "#/components/schemas/DeviceAlertCreateRequest"
+          }
+        },
+        "hardwareId": {
+          "type": "string"
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceLocationCreateRequest",
+            "$ref": "#/components/schemas/DeviceLocationCreateRequest"
+          }
+        },
+        "measurements": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceMeasurementCreateRequest",
+            "$ref": "#/components/schemas/DeviceMeasurementCreateRequest"
+          }
+        }
+      },
+      "title": "DeviceEventBatch"
+    },
+    "DeviceGroupCreateRequest": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceGroupCreateRequest"
+    },
+    "DeviceGroupElementCreateRequest": {
+      "type": "object",
+      "properties": {
+        "deviceToken": {
+          "type": "string"
+        },
+        "nestedGroupToken": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "DeviceGroupElementCreateRequest"
+    },
+    "DeviceLocationCreateRequest": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "elevation": {
+          "type": "number",
+          "format": "double"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "latitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "updateState": {
+          "type": "boolean"
+        }
+      },
+      "title": "DeviceLocationCreateRequest"
+    },
+    "DeviceMeasurementCreateRequest": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "updateState": {
+          "type": "boolean"
+        },
+        "value": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "title": "DeviceMeasurementCreateRequest"
+    },
+    "DeviceSlot": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceSlot"
+    },
+    "DeviceStateChangeCreateRequest": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "attribute": {
+          "type": "string"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "newState": {
+          "type": "string"
+        },
+        "previousState": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "updateState": {
+          "type": "boolean"
+        }
+      },
+      "title": "DeviceStateChangeCreateRequest"
+    },
+    "DeviceStateSearchCriteria": {
+      "type": "object",
+      "properties": {
+        "areaIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "assetIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "customerIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "deviceTypeIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "lastInteractionDateBefore": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "pageNumber": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "DeviceStateSearchCriteria"
+    },
+    "DeviceStatusCreateRequest": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "deviceTypeToken": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceStatusCreateRequest"
+    },
+    "DeviceStream": {
+      "type": "object",
+      "properties": {
+        "assignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "streamId": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "DeviceStream"
+    },
+    "DeviceStreamCreateRequest": {
+      "type": "object",
+      "properties": {
+        "contentType": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "streamId": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceStreamCreateRequest"
+    },
+    "DeviceTypeCreateRequest": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "containerPolicy": {
+          "type": "string",
+          "enum": ["Standalone", "Composite"]
+        },
+        "description": {
+          "type": "string"
+        },
+        "deviceElementSchema": {
+          "originalRef": "DeviceElementSchema",
+          "$ref": "#/components/schemas/DeviceElementSchema"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceTypeCreateRequest"
+    },
+    "DeviceUnit": {
+      "type": "object",
+      "properties": {
+        "deviceSlots": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceSlot",
+            "$ref": "#/components/schemas/DeviceSlot"
+          }
+        },
+        "deviceUnits": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceUnit",
+            "$ref": "#/components/schemas/DeviceUnit"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "title": "DeviceUnit"
+    },
+    "ElementContent": {
+      "type": "object",
+      "properties": {
+        "attributes": {
+          "type": "array",
+          "items": {
+            "originalRef": "AttributeContent",
+            "$ref": "#/components/schemas/AttributeContent"
+          }
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "originalRef": "ElementContent",
+            "$ref": "#/components/schemas/ElementContent"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        }
+      },
+      "title": "ElementContent"
+    },
+    "GrantedAuthority": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "group": {
+          "type": "boolean"
+        },
+        "parent": {
+          "type": "string"
+        }
+      },
+      "title": "GrantedAuthority"
+    },
+    "GrantedAuthorityCreateRequest": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "group": {
+          "type": "boolean"
+        },
+        "parent": {
+          "type": "string"
+        }
+      },
+      "title": "GrantedAuthorityCreateRequest"
+    },
+    "GrantedAuthorityHierarchyNode": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "originalRef": "GrantedAuthorityHierarchyNode",
+            "$ref": "#/components/schemas/GrantedAuthorityHierarchyNode"
+          }
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "title": "GrantedAuthorityHierarchyNode"
+    },
+    "IArea": {
+      "type": "object",
+      "properties": {
+        "areaTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "bounds": {
+          "type": "array",
+          "items": {
+            "originalRef": "ILocation",
+            "$ref": "#/components/schemas/ILocation"
+          }
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentAreaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IArea"
+    },
+    "IAreaType": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "containedAreaTypeIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IAreaType"
+    },
+    "IAsset": {
+      "type": "object",
+      "properties": {
+        "assetTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IAsset"
+    },
+    "IAssetType": {
+      "type": "object",
+      "properties": {
+        "assetCategory": {
+          "type": "string",
+          "enum": ["Device", "Person", "Hardware"]
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IAssetType"
+    },
+    "IAttributeChoice": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "title": "IAttributeChoice"
+    },
+    "IAttributeNode": {
+      "type": "object",
+      "properties": {
+        "choices": {
+          "type": "array",
+          "items": {
+            "originalRef": "IAttributeChoice",
+            "$ref": "#/components/schemas/IAttributeChoice"
+          }
+        },
+        "defaultValue": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "group": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "index": {
+          "type": "boolean"
+        },
+        "localName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "nodeType": {
+          "type": "string",
+          "enum": ["Element", "Attribute"]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "String",
+            "Integer",
+            "Decimal",
+            "Boolean",
+            "Script",
+            "DeviceTypeReference",
+            "CustomerReference",
+            "AreaReference",
+            "AssetReference"
+          ]
+        }
+      },
+      "title": "IAttributeNode"
+    },
+    "IBatchElement": {
+      "type": "object",
+      "properties": {
+        "batchOperationId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "processedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "processingStatus": {
+          "type": "string",
+          "enum": ["Unprocessed", "Processing", "Failed", "Succeeded"]
+        }
+      },
+      "title": "IBatchElement"
+    },
+    "IBatchOperation": {
+      "type": "object",
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "operationType": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "processingEndedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "processingStartedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "processingStatus": {
+          "type": "string",
+          "enum": ["Unprocessed", "Processing", "FinishedSuccessfully", "FinishedWithErrors"]
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IBatchOperation"
+    },
+    "ICommandParameter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Double",
+            "Float",
+            "Int32",
+            "Int64",
+            "UInt32",
+            "UInt64",
+            "SInt32",
+            "SInt64",
+            "Fixed32",
+            "Fixed64",
+            "SFixed32",
+            "SFixed64",
+            "Bool",
+            "String",
+            "Bytes"
+          ]
+        }
+      },
+      "title": "ICommandParameter"
+    },
+    "IConfigurationModel": {
+      "type": "object",
+      "properties": {
+        "defaultXmlNamespace": {
+          "type": "string"
+        },
+        "elementsByRole": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "originalRef": "IElementNode",
+              "$ref": "#/components/schemas/IElementNode"
+            }
+          }
+        },
+        "microserviceDetails": {
+          "originalRef": "IMicroserviceDetails",
+          "$ref": "#/components/schemas/IMicroserviceDetails"
+        },
+        "rolesById": {
+          "type": "object",
+          "additionalProperties": {
+            "originalRef": "IElementRole",
+            "$ref": "#/components/schemas/IElementRole"
+          }
+        },
+        "rootRoleId": {
+          "type": "string"
+        }
+      },
+      "title": "IConfigurationModel"
+    },
+    "ICustomer": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "customerTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "parentCustomerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "ICustomer"
+    },
+    "ICustomerType": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "containedCustomerTypeIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "ICustomerType"
+    },
+    "IDatasetTemplate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "initializers": {
+          "originalRef": "Initializers",
+          "$ref": "#/components/schemas/Initializers"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "IDatasetTemplate"
+    },
+    "IDevice": {
+      "type": "object",
+      "properties": {
+        "comments": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceElementMappings": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceElementMapping",
+            "$ref": "#/components/schemas/IDeviceElementMapping"
+          }
+        },
+        "deviceTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "parentDeviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "status": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDevice"
+    },
+    "IDeviceAlert": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "level": {
+          "type": "string",
+          "enum": ["Info", "Warning", "Error", "Critical"]
+        },
+        "message": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source": {
+          "type": "string",
+          "enum": ["Device", "System"]
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceAlert"
+    },
+    "IDeviceAssignment": {
+      "type": "object",
+      "properties": {
+        "activeDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "releasedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Missing", "Released"]
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceAssignment"
+    },
+    "IDeviceCommand": {
+      "type": "object",
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "deviceTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "originalRef": "ICommandParameter",
+            "$ref": "#/components/schemas/ICommandParameter"
+          }
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceCommand"
+    },
+    "IDeviceCommandInvocation": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "commandToken": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "initiator": {
+          "type": "string",
+          "enum": ["REST", "BatchOperation", "Script", "Scheduler"]
+        },
+        "initiatorId": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "parameterValues": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "target": {
+          "type": "string",
+          "enum": ["Assignment"]
+        },
+        "targetId": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceCommandInvocation"
+    },
+    "IDeviceCommandNamespace": {
+      "type": "object",
+      "properties": {
+        "commands": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceCommand",
+            "$ref": "#/components/schemas/IDeviceCommand"
+          }
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceCommandNamespace"
+    },
+    "IDeviceCommandResponse": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "originatingEventId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "response": {
+          "type": "string"
+        },
+        "responseEventId": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "title": "IDeviceCommandResponse"
+    },
+    "IDeviceElementMapping": {
+      "type": "object",
+      "properties": {
+        "deviceElementSchemaPath": {
+          "type": "string"
+        },
+        "deviceToken": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceElementMapping"
+    },
+    "IDeviceElementSchema": {
+      "type": "object",
+      "properties": {
+        "deviceSlots": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceSlot",
+            "$ref": "#/components/schemas/IDeviceSlot"
+          }
+        },
+        "deviceUnits": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceUnit",
+            "$ref": "#/components/schemas/IDeviceUnit"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceElementSchema"
+    },
+    "IDeviceEvent": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceEvent"
+    },
+    "IDeviceEventBatchResponse": {
+      "type": "object",
+      "properties": {
+        "createdAlerts": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceAlert",
+            "$ref": "#/components/schemas/IDeviceAlert"
+          }
+        },
+        "createdLocations": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceLocation",
+            "$ref": "#/components/schemas/IDeviceLocation"
+          }
+        },
+        "createdMeasurements": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceMeasurement",
+            "$ref": "#/components/schemas/IDeviceMeasurement"
+          }
+        }
+      },
+      "title": "IDeviceEventBatchResponse"
+    },
+    "IDeviceGroup": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceGroup"
+    },
+    "IDeviceGroupElement": {
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "groupId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "nestedGroupId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "IDeviceGroupElement"
+    },
+    "IDeviceLocation": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "elevation": {
+          "type": "number",
+          "format": "double"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "latitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceLocation"
+    },
+    "IDeviceMeasurement": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "value": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "title": "IDeviceMeasurement"
+    },
+    "IDeviceSlot": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceSlot"
+    },
+    "IDeviceState": {
+      "type": "object",
+      "properties": {
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "lastAlertEventIds": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "lastInteractionDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastLocationEventId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "lastMeasurementEventIds": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "presenceMissingDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceState"
+    },
+    "IDeviceStateChange": {
+      "type": "object",
+      "properties": {
+        "alternateId": {
+          "type": "string"
+        },
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "assetId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "attribute": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceAssignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deviceId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "eventDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": ["Measurement", "Location", "Alert", "CommandInvocation", "CommandResponse", "StateChange"]
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "newState": {
+          "type": "string"
+        },
+        "previousState": {
+          "type": "string"
+        },
+        "receivedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceStateChange"
+    },
+    "IDeviceStatus": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deviceTypeId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceStatus"
+    },
+    "IDeviceStream": {
+      "type": "object",
+      "properties": {
+        "assignmentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "streamId": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceStream"
+    },
+    "IDeviceType": {
+      "type": "object",
+      "properties": {
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "containerPolicy": {
+          "type": "string",
+          "enum": ["Standalone", "Composite"]
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "deviceElementSchema": {
+          "originalRef": "IDeviceElementSchema",
+          "$ref": "#/components/schemas/IDeviceElementSchema"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IDeviceType"
+    },
+    "IDeviceUnit": {
+      "type": "object",
+      "properties": {
+        "deviceSlots": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceSlot",
+            "$ref": "#/components/schemas/IDeviceSlot"
+          }
+        },
+        "deviceUnits": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceUnit",
+            "$ref": "#/components/schemas/IDeviceUnit"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "title": "IDeviceUnit"
+    },
+    "IElementNode": {
+      "type": "object",
+      "properties": {
+        "attributeGroups": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "originalRef": "IAttributeNode",
+            "$ref": "#/components/schemas/IAttributeNode"
+          }
+        },
+        "deprecated": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "localName": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "nodeType": {
+          "type": "string",
+          "enum": ["Element", "Attribute"]
+        },
+        "onDeleteWarning": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "specializes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "IElementNode"
+    },
+    "IElementRole": {
+      "type": "object",
+      "properties": {
+        "childRoles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "multiple": {
+          "type": "boolean"
+        },
+        "name": {
+          "type": "string"
+        },
+        "optional": {
+          "type": "boolean"
+        },
+        "permanent": {
+          "type": "boolean"
+        },
+        "reorderable": {
+          "type": "boolean"
+        },
+        "subtypeRoles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "IElementRole"
+    },
+    "IGrantedAuthority": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "group": {
+          "type": "boolean"
+        },
+        "parent": {
+          "type": "string"
+        }
+      },
+      "title": "IGrantedAuthority"
+    },
+    "ILifecycleComponentState": {
+      "type": "object",
+      "properties": {
+        "childComponentStates": {
+          "type": "array",
+          "items": {
+            "originalRef": "ILifecycleComponentState",
+            "$ref": "#/components/schemas/ILifecycleComponentState"
+          }
+        },
+        "componentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "componentName": {
+          "type": "string"
+        },
+        "errorStack": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Initializing",
+            "InitializationError",
+            "Stopped",
+            "StoppedWithErrors",
+            "Starting",
+            "Started",
+            "StartedWithErrors",
+            "Pausing",
+            "Paused",
+            "Stopping",
+            "Terminating",
+            "Terminated",
+            "LifecycleError"
+          ]
+        }
+      },
+      "title": "ILifecycleComponentState"
+    },
+    "ILocation": {
+      "type": "object",
+      "properties": {
+        "elevation": {
+          "type": "number",
+          "format": "double"
+        },
+        "latitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "title": "ILocation"
+    },
+    "IMicroserviceDetails": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "global": {
+          "type": "boolean"
+        },
+        "hostname": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "identifier": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "IMicroserviceDetails"
+    },
+    "ISchedule": {
+      "type": "object",
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "token": {
+          "type": "string"
+        },
+        "triggerConfiguration": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "triggerType": {
+          "type": "string",
+          "enum": ["SimpleTrigger", "CronTrigger"]
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "ISchedule"
+    },
+    "IScheduledJob": {
+      "type": "object",
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "jobConfiguration": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "jobState": {
+          "type": "string",
+          "enum": ["Unsubmitted", "Active", "Complete"]
+        },
+        "jobType": {
+          "type": "string",
+          "enum": ["CommandInvocation", "BatchCommandInvocation"]
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "scheduleToken": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IScheduledJob"
+    },
+    "IScriptMetadata": {
+      "type": "object",
+      "properties": {
+        "activeVersion": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "originalRef": "IScriptVersion",
+            "$ref": "#/components/schemas/IScriptVersion"
+          }
+        }
+      },
+      "title": "IScriptMetadata"
+    },
+    "IScriptTemplate": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "IScriptTemplate"
+    },
+    "IScriptVersion": {
+      "type": "object",
+      "properties": {
+        "comment": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "versionId": {
+          "type": "string"
+        }
+      },
+      "title": "IScriptVersion"
+    },
+    "ITenant": {
+      "type": "object",
+      "properties": {
+        "authenticationToken": {
+          "type": "string"
+        },
+        "authorizedUserIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "datasetTemplateId": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "tenantTemplateId": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "ITenant"
+    },
+    "ITenantEngineState": {
+      "type": "object",
+      "properties": {
+        "componentState": {
+          "originalRef": "ILifecycleComponentState",
+          "$ref": "#/components/schemas/ILifecycleComponentState"
+        },
+        "microservice": {
+          "originalRef": "IMicroserviceDetails",
+          "$ref": "#/components/schemas/IMicroserviceDetails"
+        },
+        "tenantId": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "title": "ITenantEngineState"
+    },
+    "ITenantTemplate": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "ITenantTemplate"
+    },
+    "IUser": {
+      "type": "object",
+      "properties": {
+        "authorities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "hashedPassword": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "lastLogin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Expired", "Locked"]
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "title": "IUser"
+    },
+    "IVersion": {
+      "type": "object",
+      "properties": {
+        "buildTimestamp": {
+          "type": "string"
+        },
+        "edition": {
+          "type": "string"
+        },
+        "editionIdentifier": {
+          "type": "string"
+        },
+        "versionIdentifier": {
+          "type": "string"
+        }
+      },
+      "title": "IVersion"
+    },
+    "IZone": {
+      "type": "object",
+      "properties": {
+        "areaId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "bounds": {
+          "type": "array",
+          "items": {
+            "originalRef": "ILocation",
+            "$ref": "#/components/schemas/ILocation"
+          }
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "fillColor": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "opacity": {
+          "type": "number",
+          "format": "double"
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "title": "IZone"
+    },
+    "Initializers": {
+      "type": "object",
+      "properties": {
+        "assetManagement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deviceManagement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scheduleManagement": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "Initializers"
+    },
+    "InstanceTopologySummary": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "global": {
+          "type": "boolean"
+        },
+        "hostnames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "icon": {
+          "type": "string"
+        },
+        "identifier": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "InstanceTopologySummary"
+    },
+    "JsonNode": {
+      "type": "object",
+      "properties": {
+        "array": {
+          "type": "boolean"
+        },
+        "bigDecimal": {
+          "type": "boolean"
+        },
+        "bigInteger": {
+          "type": "boolean"
+        },
+        "binary": {
+          "type": "boolean"
+        },
+        "boolean": {
+          "type": "boolean"
+        },
+        "containerNode": {
+          "type": "boolean"
+        },
+        "double": {
+          "type": "boolean"
+        },
+        "float": {
+          "type": "boolean"
+        },
+        "floatingPointNumber": {
+          "type": "boolean"
+        },
+        "int": {
+          "type": "boolean"
+        },
+        "integralNumber": {
+          "type": "boolean"
+        },
+        "long": {
+          "type": "boolean"
+        },
+        "missingNode": {
+          "type": "boolean"
+        },
+        "nodeType": {
+          "type": "string",
+          "enum": ["ARRAY", "BINARY", "BOOLEAN", "MISSING", "NULL", "NUMBER", "OBJECT", "POJO", "STRING"]
+        },
+        "null": {
+          "type": "boolean"
+        },
+        "number": {
+          "type": "boolean"
+        },
+        "object": {
+          "type": "boolean"
+        },
+        "pojo": {
+          "type": "boolean"
+        },
+        "short": {
+          "type": "boolean"
+        },
+        "textual": {
+          "type": "boolean"
+        },
+        "valueNode": {
+          "type": "boolean"
+        }
+      },
+      "title": "JsonNode"
+    },
+    "Location": {
+      "type": "object",
+      "properties": {
+        "elevation": {
+          "type": "number",
+          "format": "double"
+        },
+        "latitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "title": "Location"
+    },
+    "Parameter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "title": "Parameter"
+    },
+    "Response": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "title": "Response"
+    },
+    "ScheduleCreateRequest": {
+      "type": "object",
+      "properties": {
+        "endDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "token": {
+          "type": "string"
+        },
+        "triggerConfiguration": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "triggerType": {
+          "type": "string",
+          "enum": ["SimpleTrigger", "CronTrigger"]
+        }
+      },
+      "title": "ScheduleCreateRequest"
+    },
+    "ScheduledJobCreateRequest": {
+      "type": "object",
+      "properties": {
+        "jobConfiguration": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "jobState": {
+          "type": "string",
+          "enum": ["Unsubmitted", "Active", "Complete"]
+        },
+        "jobType": {
+          "type": "string",
+          "enum": ["CommandInvocation", "BatchCommandInvocation"]
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "scheduleToken": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "ScheduledJobCreateRequest"
+    },
+    "ScriptCloneRequest": {
+      "type": "object",
+      "properties": {
+        "comment": {
+          "type": "string"
+        }
+      },
+      "title": "ScriptCloneRequest"
+    },
+    "ScriptCreateRequest": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "title": "ScriptCreateRequest"
+    },
+    "SearchProvider": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "SearchProvider"
+    },
+    "TenantCreateRequest": {
+      "type": "object",
+      "properties": {
+        "authenticationToken": {
+          "type": "string"
+        },
+        "authorizedUserIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "backgroundColor": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "datasetTemplateId": {
+          "type": "string"
+        },
+        "foregroundColor": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "tenantTemplateId": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "TenantCreateRequest"
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "authorities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "hashedPassword": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "lastLogin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Expired", "Locked"]
+        },
+        "token": {
+          "type": "string"
+        },
+        "updatedBy": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "title": "User"
+    },
+    "UserCreateRequest": {
+      "type": "object",
+      "properties": {
+        "authorities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "password": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Expired", "Locked"]
+        },
+        "token": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        }
+      },
+      "title": "UserCreateRequest"
+    },
+    "ZoneCreateRequest": {
+      "type": "object",
+      "properties": {
+        "areaToken": {
+          "type": "string"
+        },
+        "borderColor": {
+          "type": "string"
+        },
+        "bounds": {
+          "type": "array",
+          "items": {
+            "originalRef": "Location",
+            "$ref": "#/components/schemas/Location"
+          }
+        },
+        "fillColor": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "opacity": {
+          "type": "number",
+          "format": "double"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "ZoneCreateRequest"
+    },
+    "IChartEntry_double_": {
+      "type": "object",
+      "properties": {
+        "measurementDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "value": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "title": "IChartEntry«double»"
+    },
+    "IChartSeries_double_": {
+      "type": "object",
+      "properties": {
+        "entries": {
+          "type": "array",
+          "items": {
+            "originalRef": "IChartEntry«double»",
+            "$ref": "#/components/schemas/IChartEntry_double_"
+          }
+        },
+        "measurementId": {
+          "type": "string"
+        }
+      },
+      "title": "IChartSeries«double»"
+    },
+    "ISearchResults_DeviceAssignment_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "DeviceAssignment",
+            "$ref": "#/components/schemas/DeviceAssignment"
+          }
+        }
+      },
+      "title": "ISearchResults«DeviceAssignment»"
+    },
+    "ISearchResults_IAreaType_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IAreaType",
+            "$ref": "#/components/schemas/IAreaType"
+          }
+        }
+      },
+      "title": "ISearchResults«IAreaType»"
+    },
+    "ISearchResults_IArea_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IArea",
+            "$ref": "#/components/schemas/IArea"
+          }
+        }
+      },
+      "title": "ISearchResults«IArea»"
+    },
+    "ISearchResults_IAssetType_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IAssetType",
+            "$ref": "#/components/schemas/IAssetType"
+          }
+        }
+      },
+      "title": "ISearchResults«IAssetType»"
+    },
+    "ISearchResults_IAsset_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IAsset",
+            "$ref": "#/components/schemas/IAsset"
+          }
+        }
+      },
+      "title": "ISearchResults«IAsset»"
+    },
+    "ISearchResults_IBatchElement_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IBatchElement",
+            "$ref": "#/components/schemas/IBatchElement"
+          }
+        }
+      },
+      "title": "ISearchResults«IBatchElement»"
+    },
+    "ISearchResults_IBatchOperation_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IBatchOperation",
+            "$ref": "#/components/schemas/IBatchOperation"
+          }
+        }
+      },
+      "title": "ISearchResults«IBatchOperation»"
+    },
+    "ISearchResults_ICustomerType_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "ICustomerType",
+            "$ref": "#/components/schemas/ICustomerType"
+          }
+        }
+      },
+      "title": "ISearchResults«ICustomerType»"
+    },
+    "ISearchResults_ICustomer_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "ICustomer",
+            "$ref": "#/components/schemas/ICustomer"
+          }
+        }
+      },
+      "title": "ISearchResults«ICustomer»"
+    },
+    "ISearchResults_IDeviceAlert_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceAlert",
+            "$ref": "#/components/schemas/IDeviceAlert"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceAlert»"
+    },
+    "ISearchResults_IDeviceAssignment_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceAssignment",
+            "$ref": "#/components/schemas/IDeviceAssignment"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceAssignment»"
+    },
+    "ISearchResults_IDeviceCommandInvocation_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceCommandInvocation",
+            "$ref": "#/components/schemas/IDeviceCommandInvocation"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceCommandInvocation»"
+    },
+    "ISearchResults_IDeviceCommandNamespace_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceCommandNamespace",
+            "$ref": "#/components/schemas/IDeviceCommandNamespace"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceCommandNamespace»"
+    },
+    "ISearchResults_IDeviceCommandResponse_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceCommandResponse",
+            "$ref": "#/components/schemas/IDeviceCommandResponse"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceCommandResponse»"
+    },
+    "ISearchResults_IDeviceCommand_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceCommand",
+            "$ref": "#/components/schemas/IDeviceCommand"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceCommand»"
+    },
+    "ISearchResults_IDeviceGroupElement_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceGroupElement",
+            "$ref": "#/components/schemas/IDeviceGroupElement"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceGroupElement»"
+    },
+    "ISearchResults_IDeviceGroup_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceGroup",
+            "$ref": "#/components/schemas/IDeviceGroup"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceGroup»"
+    },
+    "ISearchResults_IDeviceLocation_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceLocation",
+            "$ref": "#/components/schemas/IDeviceLocation"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceLocation»"
+    },
+    "ISearchResults_IDeviceMeasurement_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceMeasurement",
+            "$ref": "#/components/schemas/IDeviceMeasurement"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceMeasurement»"
+    },
+    "ISearchResults_IDeviceStateChange_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceStateChange",
+            "$ref": "#/components/schemas/IDeviceStateChange"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceStateChange»"
+    },
+    "ISearchResults_IDeviceState_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceState",
+            "$ref": "#/components/schemas/IDeviceState"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceState»"
+    },
+    "ISearchResults_IDeviceStatus_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceStatus",
+            "$ref": "#/components/schemas/IDeviceStatus"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceStatus»"
+    },
+    "ISearchResults_IDeviceStream_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceStream",
+            "$ref": "#/components/schemas/IDeviceStream"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceStream»"
+    },
+    "ISearchResults_IDeviceType_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDeviceType",
+            "$ref": "#/components/schemas/IDeviceType"
+          }
+        }
+      },
+      "title": "ISearchResults«IDeviceType»"
+    },
+    "ISearchResults_IDevice_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IDevice",
+            "$ref": "#/components/schemas/IDevice"
+          }
+        }
+      },
+      "title": "ISearchResults«IDevice»"
+    },
+    "ISearchResults_IGrantedAuthority_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IGrantedAuthority",
+            "$ref": "#/components/schemas/IGrantedAuthority"
+          }
+        }
+      },
+      "title": "ISearchResults«IGrantedAuthority»"
+    },
+    "ISearchResults_IScheduledJob_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IScheduledJob",
+            "$ref": "#/components/schemas/IScheduledJob"
+          }
+        }
+      },
+      "title": "ISearchResults«IScheduledJob»"
+    },
+    "ISearchResults_ISchedule_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "ISchedule",
+            "$ref": "#/components/schemas/ISchedule"
+          }
+        }
+      },
+      "title": "ISearchResults«ISchedule»"
+    },
+    "ISearchResults_ITenant_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "ITenant",
+            "$ref": "#/components/schemas/ITenant"
+          }
+        }
+      },
+      "title": "ISearchResults«ITenant»"
+    },
+    "ISearchResults_IUser_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IUser",
+            "$ref": "#/components/schemas/IUser"
+          }
+        }
+      },
+      "title": "ISearchResults«IUser»"
+    },
+    "ISearchResults_IZone_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "IZone",
+            "$ref": "#/components/schemas/IZone"
+          }
+        }
+      },
+      "title": "ISearchResults«IZone»"
+    },
+    "SearchResults_GrantedAuthority_": {
+      "type": "object",
+      "properties": {
+        "numResults": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "originalRef": "GrantedAuthority",
+            "$ref": "#/components/schemas/GrantedAuthority"
+          }
+        }
+      },
+      "title": "SearchResults«GrantedAuthority»"
+    }
+  }
+}
