@@ -1,0 +1,308 @@
+{
+	"paths":{
+		"/api/cargo/createCargo": {
+		  "post": {
+			"description": "create cargo",
+			"summary": "create cargo",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"description": "cargo",
+				"schema": { 
+					"$ref": "#/definitions/Cargo"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/Leg/{trackingId}/routeCargo": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"description": "cargo",
+				"schema": { 
+					"$ref": "#/definitions/Cargo"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/Itinerary/{trackingId}/routeCargo": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"description": "cargo",
+				"schema": { 
+					"$ref": "#/definitions/Cargo"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/RouteSpecification/bookCargo": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"description": "cargo",
+				"schema": { 
+					"$ref": "#/definitions/Cargo"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/RouteSpecification/{destination}/changeCargoDestination": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/RouteSpecification"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/Delivery/{trackingId}/viewCargos": {
+		  "get": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/Cargo"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/Delivery/{trackingId}/handleCargoEvent": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/HandlingEvent"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/HandlingEvent/{trackingId}/viewTracking": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/HandlingEvent"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/HandlingEvent/{trackingId}/handleCargoEvent": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/HandlingEvent"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/Voyage/{trackingId}/handleCargoEvent": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/HandlingEvent"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/Voyage/{trackingId}/createVoyage": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/Voyage"
+				}
+			  }
+			}
+		  }
+		},
+		"/api/CarrierMovement/{trackingId}/addCarrierMovement": {
+		  "post": {
+			"description": "empty",
+			"summary": "empty",
+			"parameters": [],
+			"responses": {
+			  "200": {
+				"schema": { 
+					"$ref": "#/definitions/CarrierMovement"
+				}
+			  }
+			}
+		  }
+		},		
+		"api/location/createLocation":{
+			"post":{
+				"description":"empty",
+				"summary":"empty",
+				"parameters": [],
+				"responses": {
+				  "200": {
+					"description": "a location",
+					"schema": { "$ref": "#/definitions/Location" }
+				  }
+				}
+			}
+		}
+	},
+	"definitions":{
+		"Cargo":{
+			"type":"object",
+			"properties":{
+				"trackingId":{
+					"type":"string"
+				}		
+			}
+		},	
+		"Cargos":{
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/Cargo"
+			  }
+		},
+		"Leg":{
+			"type":"object",
+			"properties":{
+				"load":{
+					"type":"#/definitions/Location"
+				},
+				"unload":{
+					"type":"#/definitions/Location"
+				},
+				"loadTime":{
+					"type":"Date"
+				},
+				"unloadTime":{
+					"type":"Date"
+				}
+				
+			}
+		},
+		"CarrierMovement":{
+			"type":"object",
+			"properties":{
+				"departure":{
+					"type":"#/definitions/Location"
+				},
+				"arrival":{
+					"type":"#/definitions/Location"
+				},
+				"departureTime":{
+					"type":"Date"
+				},
+				"arrivalTime":{
+					"type":"Date"
+				}
+				
+			}
+		},
+		"Itinerary":{
+			"type":"Object",
+			"properties":{
+					"itineraryNo":{
+						"type":"String"
+					}
+			}
+		},
+		"Location":{
+			"type":"object",
+			"properties":{	
+				"name":{
+					"type":"String"
+				}
+			}
+		},	
+		"Voyage":{
+			"type":"object",
+			"properties":{	
+				"voyagaNumber":{
+					"type":"String"
+				}
+			}
+		},	
+		"HandlingEvent":{
+			"type":"object",
+			"properties":{	
+				"location":{
+					"type":"#/definitions/Location"
+				},
+				"completion":{
+					"type":"Date"
+				}			
+			}
+		},
+		"RouteSpecification":{
+			"type":"object",
+			"properties":{
+				"origin":{
+					"type":"#/definitions/Location"
+				},
+				"destination":{
+					"type":"#/definitions/Location"
+				},
+				"arrivalDeadline":{
+					"type":"Date"
+				}
+				
+			}
+		},
+		"Delivery":{
+			"type":"object",
+			"properties":{
+				"transportStatus":{
+					"type":"TransportStatus"
+				},
+				"estimatedArrivalDate":{
+					"type":"Date"
+				},
+				"routingStatus":{
+					"type":"RoutingStatus"
+				}
+			}
+		}
+	}
+
+	
+	
+}

@@ -1,0 +1,281 @@
+{
+  "paths": {
+    "/owners/{ownerId}": {
+      "get": {
+        "description": "get current owner info by owner's id",
+        "summary": "get current owner info by owner's id",
+        "responses": {
+          "200": {
+            "description": "owner info",
+            "schema": {
+              "$ref": "#/definitions/Owner"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "update the owner info by owner's id",
+        "summary": "update the owner info by owner's id",
+        "responses": {
+          "200": {
+            "description": "updated owner info",
+            "schema": {
+              "$ref": "#/definitions/Owner"
+            }
+          }
+        }
+      }
+    },
+    "/owners": {
+      "get": {
+        "description": "Get all owners info",
+        "summary": "Get all owners info",
+        "responses": {
+          "200": {
+            "description": "owner info",
+            "schema": {
+              "$ref": "#/definitions/Owners"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create a new Owner",
+        "summary": "Create a new Owner",
+        "responses": {
+          "200": {
+            "description": "owner info",
+            "schema": {
+              "$ref": "#/definitions/Owner"
+            }
+          }
+        }
+      }
+    },
+    "/vets": {
+      "get": {
+        "description": "get all vet info",
+        "summary": "get all vet info",
+        "responses": {
+          "200": {
+            "description": "vet info",
+            "schema": {
+              "$ref": "#/definitions/Vet"
+            }
+          }
+        }
+      }
+    },
+    "/owners/{ownerId}/pets": {
+      "post": {
+        "description": "create the owner's a new pet",
+        "summary": "create the owner's a new pet",
+        "responses": {
+          "200": {
+            "description": "pet info",
+            "schema": {
+              "$ref": "#/definitions/Pet"
+            }
+          }
+        }
+      }
+    },
+    "/owners/pets/{petId}": {
+      "get": {
+        "description": "get owner's the pet which fetched by id",
+        "summary": "get owner's the pet which fetched by id",
+        "responses": {
+          "200": {
+            "description": "pet info",
+            "schema": {
+              "$ref": "#/definitions/Pet"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "update owner's the pet which fetched by id",
+        "summary": "update owner's the pet which fetched by id",
+        "responses": {
+          "200": {
+            "description": "owner info",
+            "schema": {
+              "$ref": "#/definitions/Pet"
+            }
+          }
+        }
+      }
+    },
+    "/owners/pets/{petId}/visits": {
+      "get": {
+        "description": "get all visits info of the pets which fetched by id",
+        "summary": "get all visits info of the pets which fetched by id",
+        "responses": {
+          "200": {
+            "description": "visit info",
+            "schema": {
+              "$ref": "#/definitions/Visits"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "create all visits info of the pets which fetched by id",
+        "summary": "create all visits info of the pets which fetched by id",
+        "responses": {
+          "200": {
+            "description": "visit info",
+            "schema": {
+              "$ref": "#/definitions/Visits"
+            }
+          }
+        }
+      }
+    },
+    "/owners/*/pets/{petId}/visits/new": {
+      "get": {
+        "description": "get all visits info of the pets which fetched by id",
+        "summary": "get all visits info of the pets which fetched by id",
+        "responses": {
+          "200": {
+            "description": "visit info",
+            "schema": {
+              "$ref": "#/definitions/Visits"
+            }
+          }
+        }
+      }
+    },
+    "/pets/{ownerId}/pets/{petId}/visits/new": {
+      "post": {
+        "description": "create all visits info of the pets which fetched by id",
+        "summary": "create all visits info of the pets which fetched by id",
+        "responses": {
+          "200": {
+            "description": "visit info",
+            "schema": {
+              "$ref": "#/definitions/Visits"
+            }
+          }
+        }
+      }
+    },
+    "/pets/visits": {
+      "get": {
+        "description": "get all visits info of all pets",
+        "summary": "get all visits info of all pets",
+        "responses": {
+          "200": {
+            "description": "visit info",
+            "schema": {
+              "$ref": "#/definitions/Visits"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Owners": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Owner"
+      }
+    },
+    "Owner": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "telephone": {
+          "type": "string"
+        },
+        "pets": {
+          "type": "#/definitions/Pet"
+        }
+      }
+    },
+    "Pet": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int"
+        },
+        "name": {
+          "type": "string"
+        },
+        "birthDate": {
+          "type": "date"
+        },
+        "type": {
+          "type": "PetType"
+        },
+        "city": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "#/definitions/Owner"
+        }
+      }
+    },
+    "Vets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Vet"
+      }
+    },
+    "Vet": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "specialties": {
+          "type": "Specialty"
+        }
+      }
+    },
+    "Visits": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Visit"
+      }
+    },
+    "Visit": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int"
+        },
+        "date": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "petId": {
+          "type": "int"
+        }
+      }
+    }
+  }
+}

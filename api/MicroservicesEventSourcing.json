@@ -1,0 +1,341 @@
+{
+  "paths": {
+    "/v1/accounts": {
+      "get": {
+        "description": "Returns a list containing all accounts of current user",
+        "summary": "Returns a list containing all accounts of current user",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "account info",
+            "schema": {
+              "$ref": "#/definitions/Accounts"
+            }
+          }
+        }
+      }
+    },
+    "/v1/catalog": {
+      "get": {
+        "description": "Return a catalog info",
+        "summary": "Return a catalog info",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of board",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "catalogNumber": {
+                  "type": "long"
+                },
+                "products": {
+                  "type": "Product"
+                },
+                "name": {
+                  "type": "String"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/catalog/products/{productId}": {
+      "get": {
+        "description": "Return the Specified product",
+        "summary": "Return the Specified product",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of task",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        }
+      }
+    },
+    "/v1/inventory": {
+      "get": {
+        "description": "get all inventory info",
+        "summary": "get all inventory info",
+        "responses": {
+          "200": {
+            "description": "inventory info",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "inventoryNumber": {
+                    "type": "String"
+                  },
+                  "product": {
+                    "type": "Product"
+                  },
+                  "warehouse": {
+                    "type": "Warehouse"
+                  },
+                  "status": {
+                    "type": "InventoryStatus"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/inventory/products/{productId}": {
+      "get": {
+        "description": "Return the Specified product",
+        "summary": "Return the Specified product",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of task",
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          }
+        }
+      }
+    },
+    "/v1/accounts/{accountNumber}/orders": {
+      "put": {
+        "description": "return the specified account's all orders",
+        "summary": "return the specified account's all orders",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "orders info",
+            "schema": {
+              "$ref": "#/definitions/Orders"
+            }
+          }
+        }
+      }
+    },
+    "/v1/orders": {
+      "post": {
+        "description": "create a new order",
+        "summary": "create a new order",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "order info",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            }
+          }
+        }
+      }
+    },
+    "/v1/orders/{orderId}": {
+      "get": {
+        "description": "return the specified order which fetched by id",
+        "summary": "return the specified order which fetched by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "order info",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            }
+          }
+        }
+      }
+    },
+    "/v1/cart": {
+      "get": {
+        "description": "return the cart info",
+        "summary": "return the cart info",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "cart info",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "productMap": {
+                  "type": "string"
+                },
+                "cartItems": {
+                  "type": "AuditEntry"
+                },
+                "catalog": {
+                  "type": "Catalog"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cart/checkout": {
+      "post": {
+        "description": "create a order from the cart",
+        "summary": "create a order from the cart",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "order info",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "resultMessage": {
+                  "type": "string"
+                },
+                "order": {
+                  "type": "Order"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/users": {
+      "post": {
+        "description": "create a new user",
+        "summary": "create a new user",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "user info",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/v1/users/{id}": {
+      "get": {
+        "description": "return the specified user infow which fetched by id",
+        "summary": "return the specified user infow which fetched by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "user info",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "put": {
+        "description": "update the specified user info which fetched by id",
+        "summary": "update the specified user info which fetched by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "user info",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "delete user info by id",
+        "summary": "delete user info by id",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Account": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "accountNumber": {
+          "type": "String"
+        },
+        "defaultAccount": {
+          "type": "Boolean"
+        },
+        "creditCards": {
+          "type": "CreditCard"
+        },
+        "addresses": {
+          "type": "Address"
+        }
+      }
+    },
+    "Accounts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Account"
+      }
+    },
+    "Product": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "String"
+        },
+        "productId": {
+          "type": "String"
+        },
+        "description": {
+          "type": "String"
+        },
+        "unitPrice": {
+          "type": "Double"
+        },
+        "inStock": {
+          "type": "Boolean"
+        }
+      }
+    },
+    "Orders": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Order"
+      }
+    },
+    "Order": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "ObjectId"
+        },
+        "accountNumber": {
+          "type": "String"
+        },
+        "orderStatus": {
+          "type": "OrderStatus"
+        },
+        "orderItems": {
+          "type": "array"
+        },
+        "shippingAddress": {
+          "type": "Address"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "String"
+        },
+        "firstName": {
+          "type": "String"
+        },
+        "lastName": {
+          "type": "String"
+        },
+        "email": {
+          "type": "String"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "paths": {
+    "/orders": {
+      "post": {
+        "description": "create new order",
+        "summary": "create new order",
+        "responses": {
+          "200": {
+            "description": "Newly created this order",
+            "schema": {
+              "$ref": "#/definitions/Orders"
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "Returns a list containing all order",
+        "summary": "get all orders",
+        "responses": {
+          "200": {
+            "description": "A list of order",
+            "schema": {
+              "$ref": "#/definitions/Order"
+            }
+          }
+        }
+      }
+    },
+    "/catalogue": {
+      "get": {
+        "description": "get all catalogue info",
+        "summary": "get all catalogue info",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "catalogue",
+            "schema": {
+              "$ref": "#/definitions/Catalogues"
+            }
+          }
+        }
+      }
+    },
+    "/catalogue/{id}": {
+      "get": {
+        "description": "get the specified catalogue info",
+        "summary": "get the specified catalogue",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of task",
+            "schema": {
+              "$ref": "#/definitions/Catalogue"
+            }
+          }
+        }
+      }
+    },
+    "/catalogue/size": {
+      "get": {
+        "description": "get the size of catalogues",
+        "summary": "get the size of catalogues",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "size of catalogue",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "size": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tags": {
+      "get": {
+        "description": "get all tags",
+        "summary": "get all tags",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "tag info",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "tag": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "login": {
+      "get": {
+        "description": "return logged in user",
+        "summary": "return logged in user",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "user info",
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "description": "register new user",
+        "summary": "register new user",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "user info",
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        }
+      }
+    },
+    "/customers": {
+      "get": {
+        "description": "return all customers",
+        "summary": "return all customers",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "customers info",
+            "schema": {
+              "$ref": "#/definitions/Customers"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{id}": {
+      "get": {
+        "description": "return the specified customer",
+        "summary": "return the specified customer",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "customer info",
+            "schema": {
+              "$ref": "#/definitions/Customers"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "delete the specified customer",
+        "summary": "delete the specified customer",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/customers/{id}/cards": {
+      "get": {
+        "description": "return cards of the specified customer",
+        "summary": "return cards of the specified customer",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "card info",
+            "schema": {
+              "$ref": "#/definitions/Cards"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{id}/addresses": {
+      "get": {
+        "description": "return addresses of specified customer",
+        "summary": "return addresses of specified customer",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "addresses info",
+            "schema": {
+              "$ref": "#/definitions/Address"
+            }
+          }
+        }
+      }
+    },
+    "/cards": {
+      "get": {
+        "description": "return all cards",
+        "summary": "return all cards",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "card info",
+            "schema": {
+              "$ref": "#/definitions/Cards"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "create new card",
+        "summary": "create new card",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "card info",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cards/{id}": {
+      "get": {
+        "description": "return the specified card",
+        "summary": "return the specified card",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "card info",
+            "schema": {
+              "$ref": "#/definitions/Card"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "delete the the specified card",
+        "summary": "delete the the specified card",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    },
+    "/addresses": {
+      "get": {
+        "description": "return all addresses",
+        "summary": "return all addresses",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "address info",
+            "schema": {
+              "$ref": "#/definitions/Addresses"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "create new address",
+        "summary": "create new address",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "new address id",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/addresses/{id}": {
+      "get": {
+        "description": "return the specified address",
+        "summary": "return the specified address",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "address info",
+            "schema": {
+              "$ref": "#/definitions/Address"
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "delete the specified address",
+        "summary": "delete the specified address",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Order": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string"
+        },
+        "customer": {
+          "$ref": "#/definitions/Customer"
+        },
+        "address": {
+          "type": "string"
+        },
+        "card": {
+          "type": "string"
+        },
+        "shipment": {
+          "type": "string"
+        },
+        "date": {
+          "type": "date"
+        },
+        "total": {
+          "type": "number"
+        },
+        "items": {
+          "type": "date"
+        }
+      }
+    },
+    "Orders": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Order"
+      }
+    },
+    "Catalogue": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "array"
+        },
+        "price": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "array"
+        }
+      }
+    },
+    "Catalogues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Catalogue"
+      }
+    },
+    "Customer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      }
+    },
+    "Customers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Customer"
+      }
+    },
+    "Card": {
+      "type": "object",
+      "properties": {
+        "longNum": {
+          "type": "string"
+        },
+        "expires": {
+          "type": "string"
+        },
+        "ccv": {
+          "type": "string"
+        }
+      }
+    },
+    "Cards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Customer"
+      }
+    },
+    "Address": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "postcode": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "Addresses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Address"
+      }
+    },
+    "Getcartresponse": {
+      "title": "Get cart response",
+      "type": "object",
+      "properties": {
+        "customerId": {
+          "type": "string"
+        }
+      },
+      "required": ["customerId"]
+    },
+    "CartItem": {
+      "title": "Cart item",
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer"
+        },
+        "unitPrice": {
+          "type": "number"
+        }
+      },
+      "required": ["itemId", "quantity", "unitPrice"]
+    }
+  }
+}

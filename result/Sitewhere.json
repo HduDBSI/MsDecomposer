@@ -1,0 +1,293 @@
+{
+  "ms_32": [
+    "get /areas",
+    "post /areas",
+    "get /areas/{areaToken}",
+    "put /areas/{areaToken}",
+    "delete /areas/{areaToken}"
+  ],
+  "ms_33": [
+    "get /areas/{areaToken}/alerts",
+    "post /assignments/bulk/alerts",
+    "get /assignments/{token}/alerts",
+    "post /assignments/{token}/alerts",
+    "get /customers/{customerToken}/alerts"
+  ],
+  "ms_23": [
+    "get /areas/{areaToken}/assignments",
+    "get /assignments",
+    "delete /assignments/{token}",
+    "post /assignments/{token}/measurements",
+    "post /assignments/{token}/statechanges",
+    "get /customers/{customerToken}/assignments",
+    "get /devices/{deviceToken}/assignment",
+    "get /devices/{deviceToken}/assignments"
+  ],
+  "ms_43": [
+    "get /areas/{areaToken}/invocations",
+    "get /areas/{areaToken}/label/{generatorId}",
+    "post /assignments/bulk/invocations",
+    "get /assignments/{token}/invocations",
+    "get /customers/{customerToken}/invocations",
+    "get /customers/{customerToken}/label/{generatorId}"
+  ],
+  "ms_37": [
+    "get /areas/{areaToken}/locations",
+    "post /assignments/bulk/locations",
+    "get /assignments/{token}/locations",
+    "post /assignments/{token}/locations",
+    "get /customers/{customerToken}/locations"
+  ],
+  "ms_38": [
+    "get /areas/{areaToken}/measurements",
+    "post /assignments/bulk/measurements",
+    "get /assignments/{token}/measurements",
+    "get /customers/{customerToken}/measurements"
+  ],
+  "ms_29": [
+    "get /areas/{areaToken}/responses",
+    "post /assignments/bulk/responses",
+    "get /assignments/{token}/responses",
+    "post /assignments/{token}/responses",
+    "get /customers/{customerToken}/responses",
+    "get /invocations/id/{invocationId}/responses"
+  ],
+  "ms_36": [
+    "get /areas/{areaToken}/statechanges",
+    "post /assignments/bulk/statechanges",
+    "get /assignments/{token}/statechanges",
+    "get /customers/{customerToken}/statechanges"
+  ],
+  "ms_14": [
+    "get /areatypes",
+    "post /areatypes",
+    "get /areatypes/{areaTypeToken}",
+    "put /areatypes/{areaTypeToken}",
+    "delete /areatypes/{areaTypeToken}"
+  ],
+  "ms_41": [
+    "get /areatypes/{areaTypeToken}/label/{generatorId}",
+    "get /assets/{assetToken}/label/{generatorId}",
+    "get /assettypes/{assetTypeToken}/label/{generatorId}",
+    "get /customertypes/{customerTypeToken}/label/{generatorId}",
+    "get /devices/{deviceToken}/label/{generatorId}"
+  ],
+  "ms_8": [
+    "get /assets",
+    "post /assets",
+    "get /assets/{assetToken}",
+    "put /assets/{assetToken}",
+    "delete /assets/{assetToken}"
+  ],
+  "ms_17": [
+    "get /assettypes",
+    "post /assettypes",
+    "get /assettypes/{assetTypeToken}",
+    "put /assettypes/{assetTypeToken}",
+    "delete /assettypes/{assetTypeToken}"
+  ],
+  "ms_35": [
+    "post /assignments",
+    "get /assignments/{token}",
+    "put /assignments/{token}",
+    "post /assignments/{token}/end",
+    "post /assignments/{token}/missing"
+  ],
+  "ms_30": [
+    "post /assignments/bulk/measurements/series",
+    "get /assignments/{token}/measurements/series"
+  ],
+  "ms_19": [
+    "post /assignments/{token}/invocations",
+    "get /invocations/id/{id}",
+    "get /invocations/id/{id}/summary"
+  ],
+  "ms_44": [
+    "post /assignments/{token}/invocations/schedules/{scheduleToken}",
+    "get /assignments/{token}/label/{generatorId}"
+  ],
+  "ms_40": [
+    "get /assignments/{token}/streams",
+    "post /assignments/{token}/streams",
+    "get /assignments/{token}/streams/{streamId}"
+  ],
+  "ms_4": [
+    "get /authorities",
+    "post /authorities",
+    "get /authorities/hierarchy",
+    "get /authorities/{name}"
+  ],
+  "ms_20": [
+    "get /batch",
+    "get /batch/{operationToken}/elements",
+    "post /devices/{deviceToken}/batch"
+  ],
+  "ms_39": [
+    "post /batch/command",
+    "post /batch/command/criteria",
+    "get /batch/{batchToken}"
+  ],
+  "ms_11": [
+    "get /commands",
+    "post /commands",
+    "get /commands/namespaces",
+    "get /commands/{token}",
+    "put /commands/{token}",
+    "delete /commands/{token}"
+  ],
+  "ms_21": [
+    "get /customers",
+    "post /customers",
+    "get /customers/{customerToken}",
+    "put /customers/{customerToken}",
+    "delete /customers/{customerToken}"
+  ],
+  "ms_10": [
+    "get /customertypes",
+    "post /customertypes",
+    "get /customertypes/{customerTypeToken}",
+    "put /customertypes/{customerTypeToken}",
+    "delete /customertypes/{customerTypeToken}"
+  ],
+  "ms_12": [
+    "get /devicegroups",
+    "post /devicegroups",
+    "get /devicegroups/{groupToken}",
+    "put /devicegroups/{groupToken}",
+    "delete /devicegroups/{groupToken}"
+  ],
+  "ms_18": [
+    "get /devicegroups/{groupToken}/elements",
+    "put /devicegroups/{groupToken}/elements",
+    "get /devicegroups/{groupToken}/label/{generatorId}"
+  ],
+  "ms_24": [
+    "delete /devicegroups/{groupToken}/elements",
+    "delete /devicegroups/{groupToken}/elements/{elementId}"
+  ],
+  "ms_25": [
+    "get /devices",
+    "get /devices/group/{groupToken}",
+    "get /devices/grouprole/{role}"
+  ],
+  "ms_34": [
+    "post /devices",
+    "get /devices/{deviceToken}",
+    "put /devices/{deviceToken}",
+    "post /devices/{deviceToken}/mappings",
+    "get /devices/{hardwareId}/symbol"
+  ],
+  "ms_1": [
+    "delete /devices/{deviceToken}",
+    "get /instance/microservice/{identifier}/scripting/scripts",
+    "post /instance/microservice/{identifier}/scripting/scripts",
+    "get /instance/microservice/{identifier}/scripting/scripts/{scriptId}",
+    "post /instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}",
+    "post /instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}/activate",
+    "get /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts",
+    "post /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts",
+    "get /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}",
+    "post /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}",
+    "post /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}/activate"
+  ],
+  "ms_13": [
+    "delete /devices/{deviceToken}/mappings"
+  ],
+  "ms_2": [
+    "post /devicestates/search",
+    "get /search",
+    "post /search/{providerId}/raw"
+  ],
+  "ms_7": [
+    "get /devicetypes",
+    "delete /devicetypes/{token}"
+  ],
+  "ms_27": [
+    "post /devicetypes",
+    "get /devicetypes/{token}",
+    "put /devicetypes/{token}",
+    "get /devicetypes/{token}/label/{generatorId}",
+    "get /devicetypes/{token}/proto",
+    "get /devicetypes/{token}/spec.proto"
+  ],
+  "ms_3": [
+    "get /events/alternate/{alternateId}",
+    "get /events/id/{eventId}",
+    "get /search/{providerId}/events"
+  ],
+  "ms_22": [
+    "get /instance/microservice/{identifier}/configuration",
+    "post /instance/microservice/{identifier}/configuration",
+    "get /instance/microservice/{identifier}/configuration/model",
+    "get /instance/microservice/{identifier}/tenants/{tenantToken}/configuration",
+    "post /instance/microservice/{identifier}/tenants/{tenantToken}/configuration"
+  ],
+  "ms_45": [
+    "delete /instance/microservice/{identifier}/scripting/scripts/{scriptId}",
+    "post /instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}/clone",
+    "get /instance/microservice/{identifier}/scripting/scripts/{scriptId}/versions/{versionId}/content",
+    "delete /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}",
+    "post /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}/clone",
+    "get /instance/microservice/{identifier}/tenants/{tenantToken}/scripting/scripts/{scriptId}/versions/{versionId}/content"
+  ],
+  "ms_42": [
+    "get /instance/microservice/{identifier}/scripting/templates",
+    "get /instance/microservice/{identifier}/scripting/templates/{templateId}",
+    "get /tenants/templates"
+  ],
+  "ms_28": [
+    "get /instance/microservice/{identifier}/tenants/{tenantToken}/state",
+    "get /tenants",
+    "post /tenants",
+    "get /tenants/datasets",
+    "get /tenants/{tenantToken}",
+    "put /tenants/{tenantToken}",
+    "delete /tenants/{tenantToken}"
+  ],
+  "ms_16": [
+    "get /instance/topology",
+    "get /instance/topology/global",
+    "get /instance/topology/tenant"
+  ],
+  "ms_6": [
+    "get /jobs",
+    "delete /jobs/{token}"
+  ],
+  "ms_31": [
+    "post /jobs",
+    "get /jobs/{token}",
+    "put /jobs/{token}"
+  ],
+  "ms_9": [
+    "get /schedules",
+    "post /schedules",
+    "get /schedules/{token}",
+    "put /schedules/{token}",
+    "delete /schedules/{token}"
+  ],
+  "ms_0": [
+    "get /statuses",
+    "post /statuses",
+    "get /statuses/{token}",
+    "put /statuses/{token}",
+    "delete /statuses/{token}"
+  ],
+  "ms_26": [
+    "get /system/version"
+  ],
+  "ms_5": [
+    "get /users",
+    "post /users",
+    "get /users/{username}",
+    "put /users/{username}",
+    "delete /users/{username}",
+    "get /users/{username}/authorities"
+  ],
+  "ms_15": [
+    "get /zones",
+    "post /zones",
+    "get /zones/{zoneToken}",
+    "put /zones/{zoneToken}",
+    "delete /zones/{zoneToken}"
+  ]
+}

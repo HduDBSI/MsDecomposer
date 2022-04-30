@@ -1,0 +1,7 @@
+{"ms_5": ["get /v1/accounts", "put /v1/accounts/{accountNumber}/orders"], 
+"ms_6": ["get /v1/catalog"],
+"ms_3": ["get /v1/catalog/products/{productId}", "get /v1/inventory/products/{productId}"],
+"ms_0": ["get /v1/inventory"],
+"ms_2": ["post /v1/orders", "get /v1/orders/{orderId}"],
+"ms_4": ["get /v1/cart", "post /v1/cart/checkout"],
+"ms_1": ["post /v1/users", "get /v1/users/{id}", "put /v1/users/{id}", "delete /v1/users/{id}"]}

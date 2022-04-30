@@ -1,0 +1,296 @@
+{
+  "paths": {
+
+    "/api/boards": {
+      "post": {
+        "description": "create new board",
+        "summary": "create new board",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Newly created this board",
+            "schema": {
+              "$ref": "#/definitions/board"
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "Returns a list containing all boards",
+        "summary": "get all boards",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of Person",
+            "schema": {
+              "$ref": "#/definitions/boards"
+            }
+          }
+        }
+      }
+    },
+    "/api/boards/{id}": {
+      "get": {
+        "description": "Returns a board by id",
+        "summary": "get the board by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of board",
+            "schema": {
+              "$ref": "#/definitions/board"
+            }
+          }
+        }
+      }
+    },
+    "/api/tasks": {
+      "get": {
+        "description": "get all tasks",
+        "summary": "get all tasks",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "A list of task",
+            "schema": {
+              "$ref": "#/definitions/tasks"
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "create a new task",
+        "summary": "create a new task",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Newly created this task",
+            "schema": {
+              "$ref": "#/definitions/task"
+            }
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}": {
+      "delete": {
+        "description": "delete a task by id",
+        "summary": "delete a task by id",
+        "parameters": [],
+        "responses": {
+          "200": {}
+        }
+      },
+      "put": {
+        "description": "update a task by id",
+        "summary": "update a task by id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Newly updated this task",
+            "schema": {
+              "$ref": "#/definitions/task"
+            }
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}/backlog": {
+      "put": {
+        "description": "update the backlog of the task",
+        "summary": "update the backlog of the task",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Newly updated this task",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "boardId": {
+                    "type": "string"
+                  },
+                  "update": {
+                    "type": "AuditEntry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}/complete": {
+      "put": {
+        "description": "update the backlog of the task",
+        "summary": "update the backlog of the task",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "backlog info",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "boardId": {
+                    "type": "string"
+                  },
+                  "update": {
+                    "type": "AuditEntry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}/history": {
+      "put": {
+        "description": "update the history of the task",
+        "summary": "update the history of the task",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "history info",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "boardId": {
+                    "type": "string"
+                  },
+                  "update": {
+                    "type": "AuditEntry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}/schedule": {
+      "put": {
+        "description": "update the schedule of the task",
+        "summary": "update the schedule of the task",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "schedule info",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "boardId": {
+                    "type": "string"
+                  },
+                  "update": {
+                    "type": "AuditEntry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tasks/{id}/start": {
+      "put": {
+        "description": "update the start of the task",
+        "summary": "update the start of the task",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "start info",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "boardId": {
+                    "type": "string"
+                  },
+                  "update": {
+                    "type": "AuditEntry"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "board": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "createBy": {
+          "type": "string"
+        },
+        "updateBy": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "date"
+        },
+        "updateDate": {
+          "type": "date"
+        }
+      }
+    },
+    "boards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/board"
+      }
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "boardId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "createBy": {
+          "type": "string"
+        },
+        "updateBy": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "date"
+        },
+        "updateDate": {
+          "type": "date"
+        },
+        "statue": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/board"
+      }
+    }
+  }
+}

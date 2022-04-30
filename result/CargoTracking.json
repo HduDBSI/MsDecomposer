@@ -1,0 +1,4 @@
+{"ms_1": ["post /api/cargo/createCargo", "post /api/Leg/{trackingId}/routeCargo", "post /api/Itinerary/{trackingId}/routeCargo", "post /api/RouteSpecification/bookCargo", "get /api/Delivery/{trackingId}/viewCargos"], 
+"ms_0": ["post /api/RouteSpecification/{destination}/changeCargoDestination", "post /api/Voyage/{trackingId}/createVoyage", "post /api/CarrierMovement/{trackingId}/addCarrierMovement"},
+"ms_3":["post api/location/createLocation"], 
+"ms_2": ["post /api/Delivery/{trackingId}/handleCargoEvent", "post /api/HandlingEvent/{trackingId}/viewTracking", "post /api/HandlingEvent/{trackingId}/handleCargoEvent", "post /api/Voyage/{trackingId}/handleCargoEvent"]}

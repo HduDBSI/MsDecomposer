@@ -1,0 +1,1 @@
+{"ms_2": ["get /owners/{ownerId}", "put /owners/{ownerId}", "get /owners", "post /owners"], "ms_1": ["get /vets"], "ms_3": ["post /owners/{ownerId}/pets", "get /owners/pets/{petId}", "put /owners/pets/{petId}"], "ms_0": ["get /owners/*/pets/{petId}/visits/new", "post /pets/{ownerId}/pets/{petId}/visits/new", "get /pets/visits"]}

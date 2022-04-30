@@ -1,0 +1,1 @@
+{"ms_0": ["post /api/boards", "get /api/boards", "get /api/boards/{id}"], "ms_1": ["get /api/tasks", "post /api/tasks", "delete /api/tasks/{id}", "put /api/tasks/{id}", "put /api/tasks/{id}/backlog", "put /api/tasks/{id}/complete", "put /api/tasks/{id}/history", "put /api/tasks/{id}/schedule", "put /api/tasks/{id}/start"]}

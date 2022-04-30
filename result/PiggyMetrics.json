@@ -1,0 +1,1 @@
+{"ms_0": ["post /accounts", "get /accounts/{account}"], "ms_3": ["get /accounts/current", "put /accounts/current"], "ms_1": ["get /statistics/{account}", "put /statistics/{account}", "get /statistics/current"], "ms_2": ["get /notifications/current", "put /notifications/current"]}

@@ -1,0 +1,189 @@
+{
+  "paths": {
+    "/accounts": {
+      "post": {
+        "description": "create new account data",
+        "summary": "create new account data",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "new account",
+            "schema": { "$ref": "#/definitions/Account" }
+          }
+        }
+      }
+    },
+    "/accounts/{account}": {
+      "get": {
+        "description": "Get specified account data",
+        "summary": "Get specified account data",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "specified account",
+            "schema": { "$ref": "#/definitions/Account" }
+          }
+        }
+      }
+    },
+    "/accounts/current": {
+      "get": {
+        "description": "Get current account data",
+        "summary": "Get current account data",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Newly updated this task",
+            "schema": { "$ref": "#/definitions/Account" }
+          }
+        }
+      },
+      "put": {
+        "description": "Save current account data",
+        "summary": "Save current account data",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "updated account",
+            "schema": { "$ref": "#/definitions/Account" }
+          }
+        }
+      }
+    },
+    "/statistics/{account}": {
+      "get": {
+        "description": "Get specified account statistics",
+        "summary": "Get specified account statistics",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "current all statistics",
+            "schema": { "$ref": "#/definitions/DataPoints" }
+          }
+        }
+      },
+      "put": {
+        "description": "Create or update time series datapoint for specified account",
+        "summary": "Create or update time series datapoint for specified account",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "current all statistics",
+            "schema": { "$ref": "#/definitions/DataPoint" }
+          }
+        }
+      }
+    },
+    "/statistics/current": {
+      "get": {
+        "description": "Get current account statistics",
+        "summary": "Get current account statistics",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "current all statistics",
+            "schema": { "$ref": "#/definitions/DataPoints" }
+          }
+        }
+      }
+    },
+    "/notifications/current": {
+      "get": {
+        "description": "Get current account Recipient settings",
+        "summary": "Get current account Recipient settings",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Recipient info",
+            "schema": { "$ref": "#/definitions/Recipient" }
+          }
+        }
+      },
+      "put": {
+        "description": "Save current account notification settings",
+        "summary": "Save current account notification settings",
+        "parameters": [],
+        "responses": {
+          "200": { "description": "Recipient info", "schema": { "$ref": "#/definitions/Recipient" } }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Accounts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Account"
+      }
+    },
+    "Account": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "int"
+        },
+        "lastSeen": {
+          "type": "date"
+        },
+        "incomes": {
+          "type": "array"
+        },
+        "expenses": {
+          "type": "array"
+        },
+        "saving": {
+          "type": "Saving"
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "DataPoints": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DataPoint"
+      }
+    },
+    "DataPoint": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "int"
+        },
+        "incomes": {
+          "type": "date"
+        },
+        "expenses": {
+          "type": "array"
+        },
+        "statistics": {
+          "type": "array"
+        },
+        "rates": {
+          "type": "Saving"
+        }
+      }
+    },
+    "Recipients": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Recipient"
+      }
+    },
+    "Recipient": {
+      "type": "object",
+      "properties": {
+        "accountName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "scheduledNotifications": {
+          "type": "map"
+        }
+      }
+    }
+  }
+}

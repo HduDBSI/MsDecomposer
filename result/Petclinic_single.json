@@ -1,0 +1,24 @@
+{
+  "ms_3": [
+    "get /owners",
+    "get /owners/find",
+    "get /owners/new",
+    "post /owners/new",
+    "get /owners/{ownerId}",
+    "get /owners/{ownerId}/edit",
+    "post /owners/{ownerId}/edit"
+  ],
+  "ms_1": [
+    "get /vets"
+  ],
+  "ms_0": [
+    "get /owners/{ownerId}/pets/new",
+    "post /owners/{ownerId}/pets/new",
+    "get /owners/{ownerId}/pets/{petId}/edit",
+    "post /owners/{ownerId}/pets/{petId}/edit"
+  ],
+  "ms_2": [
+    "get /owners/*/pets/{petId}/visits/new",
+    "post /pets/{ownerId}/pets/{petId}/visits/new"
+  ]
+}
